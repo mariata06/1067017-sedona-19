@@ -9,7 +9,7 @@
 <body>
 
   <header class="page-header">
-    <nav class="page-header__site-nav visually-hidden">
+    <nav class="page-header__site-nav site-nav visually-hidden">
       <ul class="site-nav__list">
         <li class="site-nav__list-item">
           <a href="site-nav__list-link">Главная</a>
@@ -25,7 +25,8 @@
         </li>
       </ul>
     </nav>
-    <img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="page-header__logo">
+    <a href="index.html"><img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="page-header__logo"></a>
+
     <div class="page-header__menu">
     </div>
   </header>
@@ -58,23 +59,39 @@
           <p class="form-review__paragraph">Контакная информация:</p>
           <label>Контактный телефон*:</label>
           <input type="tel" name="userphonenumber" value="Введите телефон" required>
-          <button type="button" aria-label="Номер телефона"></button>
+
           <label>Электронная почта*:</label>
           <input type="email" name="useremail" value="Введите e-mail" required>
-          <button type="button" aria-label="Электронная почта"></button>
+
           <p class="form-review__paragraph">Вaше общее впечатление:</p>
-          <ul class="form-review__impression-list">
-            <li class="impression-list__item">Скорее положительное</li>
-            <li class="impression-list__item">Скорее отрицательное</li>
-            <li class="impression-list__item">Затрудняюсь ответить</li>
-          </ul>
+          <div class="form-review__impression-list impression-list">
+            <input type="radio" name="impression" id="positive" value="positive"
+              class="visually-hidden impression-list__input">
+            <label for="positive" class="impression-list__label">Скорее положительное</label>
+
+            <input type="radio" name="impression" id="negative" value="negative"
+              class="visually-hidden impression-list__input">
+            <label for="negative" class="impression-list__label">Скорее отрицательное</label>
+
+            <input type="radio" name="impression" id="neutral" value="neutral"
+              class="visually-hidden impression-list__input">
+            <label for="neutral" class="impression-list__label">Затрудняюсь ответить</label>
+          </div>
           <p class="form-review__paragraph">Посещенные достопримечательности:</p>
-          <ul class="form-review__attraction-list">
-            <li class="attraction-list__item">Мост Дьявола</li>
-            <li class="attraction-list__item">Гора-Колокол</li>
-            <li class="attraction-list__item">Слайд-парк</li>
-            <li class="attraction-list__item">Красные скалы</li>
-          </ul>
+          <div class="form-review__attraction-list attraction-list">
+            <input type="checkbox" id="devil-bridge" name="attraction" class="visually-hidden attraction-list__input">
+            <label for="devil-bridge" class="attraction-list__label">Мост Дьявола</label>
+
+            <input type="checkbox" id="bell-rock" name="attraction" class="visually-hidden attraction-list__input">
+            <label for="bell-rock" class="attraction-list__label">Гора-Колокол</label>
+
+            <input type="checkbox" id="slide-park" name="attraction" class="visually-hidden attraction-list__input">
+            <label for="slide-park" class="attraction-list__label">Слайд-парк</label>
+
+            <input type="checkbox" id="red-rock" name="attraction" class="visually-hidden attraction-list__input">
+            <label for="red-rock" class="attraction-list__label">Красные скалы</label>
+          </div>
+
           <p class="form-review__paragraph">Опишите свои эмоции:</p>
           <textarea cols="35" rows="5" placeholder="Опишите подробно все свои восторги" name="usermessage"></textarea>
           <button type="submit" class="form-review__button">Отправить отзыв</button>
@@ -86,7 +103,7 @@
 
   <footer class="page-footer">
     <p class="page-footer__hashtag">#Visitsedona</p>
-    <ul class="page-footer__social-list">
+    <ul class="page-footer__social-list social-list">
       <li class="social-list__item">
         <a href="https://twitter.com/" aria-label="twitter" class="social-list__item-icon">
           <img src="https://via.placeholder.com/150x150" alt="icon-twitter">
@@ -103,8 +120,11 @@
         </a>
       </li>
     </ul>
-    <p class="page-footer__copyright">Разработано<a href="https://htmlacademy.ru/intensive/htmlcss"><img
-          src="https://via.placeholder.com/150x150" alt="Лого HTMLacademy" class="page-footer__copyright-logo"></a></p>
+    <p class="page-footer__copyright">Разработано
+      <a href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="https://via.placeholder.com/150x150" alt="Лого HTMLacademy" class="page-footer__copyright-logo">
+      </a>
+    </p>
   </footer>
 
 </body>
