@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+
+<body>
+
+  <header class="page-header">
+    <nav class="page-header__site-nav visually-hidden">
+      <ul class="site-nav__list">
+        <li class="site-nav__list-item">
+          <a href="site-nav__list-link">Главная</a>
+        </li>
+        <li class="site-nav__list-item">
+          <a href="site-nav__list-link">фото и видео</a>
+        </li>
+        <li class="site-nav__list-item">
+          <a href="site-nav__list-link">Форма отзыва</a>
+        </li>
+        <li class="site-nav__list-item">
+          <a href="site-nav__list-link">HTML academy</a>
+        </li>
+      </ul>
+    </nav>
+    <img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="page-header__logo">
+    <div class="page-header__menu">
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <section class="review">
+      <h2 class="review__title">Оставьте свой отзыв</h2>
+      <p class="review__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами
+        достопримечательностях</p>
+    </section>
+
+    <section class="form-review">
+      <h2 class="visually-hidden">Форма отзыва</h2>
+      <div class="form-review__content">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p class="form-review__paragraph">Представьтесь:</p>
+          <div class="form-review__username">
+            <label>Имя*:</label>
+            <input type="text" name="username" value="Петр" required>
+          </div>
+          <div class="form-review__usersurname">
+            <label>Фамилия*:</label>
+            <input type="text" name="usersurname" value="Иванов" required>
+          </div>
+          <div class="form-review__usermiddlename">
+            <label>Отчество:</label>
+            <input type="text" name="usermiddlename" value="Александрович">
+          </div>
+          <p class="form-review__paragraph">Контакная информация:</p>
+          <label>Контактный телефон*:</label>
+          <input type="tel" name="userphonenumber" value="Введите телефон" required>
+          <button type="button" aria-label="Номер телефона"></button>
+          <label>Электронная почта*:</label>
+          <input type="email" name="useremail" value="Введите e-mail" required>
+          <button type="button" aria-label="Электронная почта"></button>
+          <p class="form-review__paragraph">Вaше общее впечатление:</p>
+          <ul class="form-review__impression-list">
+            <li class="impression-list__item">Скорее положительное</li>
+            <li class="impression-list__item">Скорее отрицательное</li>
+            <li class="impression-list__item">Затрудняюсь ответить</li>
+          </ul>
+          <p class="form-review__paragraph">Посещенные достопримечательности:</p>
+          <ul class="form-review__attraction-list">
+            <li class="attraction-list__item">Мост Дьявола</li>
+            <li class="attraction-list__item">Гора-Колокол</li>
+            <li class="attraction-list__item">Слайд-парк</li>
+            <li class="attraction-list__item">Красные скалы</li>
+          </ul>
+          <p class="form-review__paragraph">Опишите свои эмоции:</p>
+          <textarea cols="35" rows="5" placeholder="Опишите подробно все свои восторги" name="usermessage"></textarea>
+          <button type="submit" class="form-review__button">Отправить отзыв</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p class="page-footer__hashtag">#Visitsedona</p>
+    <ul class="page-footer__social-list">
+      <li class="social-list__item">
+        <a href="https://twitter.com/" aria-label="twitter" class="social-list__item-icon">
+          <img src="https://via.placeholder.com/150x150" alt="icon-twitter">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon">
+          <img src="https://via.placeholder.com/150x150" alt="icon-facebook">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://youtube.com/" aria-label="youtube" class="social-list__item-icon">
+          <img src="https://via.placeholder.com/150x150" alt="icon-youtube">
+        </a>
+      </li>
+    </ul>
+    <p class="page-footer__copyright">Разработано<a href="https://htmlacademy.ru/intensive/htmlcss"><img
+          src="https://via.placeholder.com/150x150" alt="Лого HTMLacademy" class="page-footer__copyright-logo"></a></p>
+  </footer>
+
+</body>
+
+</html>
