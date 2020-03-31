@@ -25,7 +25,9 @@
         </li>
       </ul>
     </nav>
-    <a href="index.html"><img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="page-header__logo"></a>
+    <a href="index.html">
+      <img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="page-header__logo">
+    </a>
 
     <div class="page-header__menu">
     </div>
@@ -66,7 +68,7 @@
           <p class="form-review__paragraph">Вaше общее впечатление:</p>
           <div class="form-review__impression-list impression-list">
             <input type="radio" name="impression" id="positive" value="positive"
-              class="visually-hidden impression-list__input">
+              class="visually-hidden impression-list__input" checked>
             <label for="positive" class="impression-list__label">Скорее положительное</label>
 
             <input type="radio" name="impression" id="negative" value="negative"
@@ -79,13 +81,16 @@
           </div>
           <p class="form-review__paragraph">Посещенные достопримечательности:</p>
           <div class="form-review__attraction-list attraction-list">
-            <input type="checkbox" id="devil-bridge" name="attraction" class="visually-hidden attraction-list__input">
+            <input type="checkbox" id="devil-bridge" name="attraction" class="visually-hidden attraction-list__input"
+              checked>
             <label for="devil-bridge" class="attraction-list__label">Мост Дьявола</label>
 
-            <input type="checkbox" id="bell-rock" name="attraction" class="visually-hidden attraction-list__input">
+            <input type="checkbox" id="bell-rock" name="attraction" class="visually-hidden attraction-list__input"
+              checked>
             <label for="bell-rock" class="attraction-list__label">Гора-Колокол</label>
 
-            <input type="checkbox" id="slide-park" name="attraction" class="visually-hidden attraction-list__input">
+            <input type="checkbox" id="slide-park" name="attraction" class="visually-hidden attraction-list__input"
+              checked>
             <label for="slide-park" class="attraction-list__label">Слайд-парк</label>
 
             <input type="checkbox" id="red-rock" name="attraction" class="visually-hidden attraction-list__input">
@@ -96,6 +101,26 @@
           <textarea cols="35" rows="5" placeholder="Опишите подробно все свои восторги" name="usermessage"></textarea>
           <button type="submit" class="form-review__button">Отправить отзыв</button>
         </form>
+      </div>
+    </section>
+
+    <section class="failure-popup popup">
+      <h2 class="visually-hidden">Модальное окно, отвечающее за появление ошибки на сайте</h2>
+      <div class="popup__content">
+        <h3 class="popup__title">Что-то пошло не так!</h3>
+        <p class="popup__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button type="button">Ок</button>
+      </div>
+    </section>
+
+    <section class="success-popup popup">
+      <h2 class="visually-hidden">Модальное окно, отвечающее за успешную отправку формы</h2>
+      <div class="popup__content">
+        <h3 class="popup__title">Ваш отзыв отправлен!</h3>
+        <p class="popup__description">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+          В ближайшее время мы опубликуем его на сайте.</p>
+        <button type="button">Закрыть окно</button>
       </div>
     </section>
 
