@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+
+<body>
+
+  <header class="page-header">
+    <nav class="page-header__site-nav site-nav visually-hidden">
+      <ul class="site-nav__list">
+        <li class="site-nav__list-item">
+          <a href="site-nav__list-link">Главная</a>
+        </li>
+        <li class="site-nav__list-item">
+          <a href="site-nav__list-link">фото и видео</a>
+        </li>
+        <li class="site-nav__list-item">
+          <a href="site-nav__list-link">Форма отзыва</a>
+        </li>
+        <li class="site-nav__list-item">
+          <a href="site-nav__list-link">HTML academy</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="index.html">
+      <img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="page-header__logo">
+    </a>
+    <div class="page-header__menu">
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <section class="photography">
+      <img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="photography__logo">
+      <h1 class="phtography__title">Фото и видео</h1>
+      <p class="photography__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
+        политике и экономике.</p>
+      <ul class="photography__list">
+        <li class="photography__list-item photography-item">
+          <figure class="photography-item__content">
+            <img src="https://via.placeholder.com/150x150" alt="Родные просторы" class="photography-item__picture">
+            <figcaption>Родные просторы</figcaption>
+          </figure>
+          <p class="photography-item__author">Автор фото: Борис</p>
+          <span class="photography-item__likes">1350</span>
+        </li>
+
+        <li class="photography__list-item photography-item">
+          <figure class="photography-item__content">
+            <img src="https://via.placeholder.com/150x150" alt="Местная растительность"
+              class="photography-item__picture">
+            <figcaption>Местная растительность</figcaption>
+          </figure>
+          <p class="photography-item__author">Автор фото: Сергей</p>
+          <span class="photography-item__likes">143</span>
+        </li>
+
+        <li class="photography__list-item photography-item">
+          <figure class="photography-item__content">
+            <img src="https://via.placeholder.com/150x150" alt="Дорога на север" class="photography-item__picture">
+            <figcaption>Дорога на север</figcaption>
+          </figure>
+          <p class="photography-item__author">Автор фото: Петр</p>
+          <span class="photography-item__likes">96</span>
+        </li>
+
+        <li class="photography__list-item photography-item">
+          <figure class="photography-item__content">
+            <img src="https://via.placeholder.com/150x150" alt="Мост дьявола" class="photography-item__picture">
+            <figcaption>Мост дьявола</figcaption>
+          </figure>
+          <p class="photography-item__author">Автор фото: Антон</p>
+          <span class="photography-item__likes">254</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="video">
+      <h1 class="visually-hidden">Видео</h1>
+      <h2 class="video__title">Все еще сомневаетесь?</h2>
+      <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
+        раз!</p>
+      <video class="video__content" width="320" height="201" controls="controls"
+        poster="https://via.placeholder.com/150x150">
+        <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
+        <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
+        Тег video не поддерживается вашим браузером.
+        <a href="video/duel.mp4">Скачайте видео</a>.
+        <div class="video__bar"></div>
+        <div class="video__button-list"></div>
+      </video>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p class="page-footer__hashtag">#Visitsedona</p>
+    <ul class="page-footer__social-list social-list">
+      <li class="social-list__item">
+        <a href="https://twitter.com/" aria-label="twitter" class="social-list__item-icon">
+          <img src="https://via.placeholder.com/150x150" alt="icon-twitter">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon">
+          <img src="https://via.placeholder.com/150x150" alt="icon-facebook">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="https://youtube.com/" aria-label="youtube" class="social-list__item-icon">
+          <img src="https://via.placeholder.com/150x150" alt="icon-youtube">
+        </a>
+      </li>
+    </ul>
+    <p class="page-footer__copyright">Разработано
+      <a href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="https://via.placeholder.com/150x150" alt="Лого HTMLacademy" class="page-footer__copyright-logo">
+      </a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
