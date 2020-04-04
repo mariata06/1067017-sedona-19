@@ -1,0 +1,40 @@
+.form-review {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form-review__paragraph {
+  @include title($size-title, $height-title, $weight-bold, $color-black);
+}
+
+.form-review label {
+  line-height: 24px;
+  color: $color-black;
+}
+
+.form-review input {
+  font-weight: 700;
+
+  &::placeholder {
+    font-weight: 700;
+  }
+}
+
+.form-review__input-container {
+  display: block;
+}
+
+.form-review textarea {
+  &::placeholder {
+    @include title($size-title, $height-title, $weight-bold, $color-black);
+  }
+}
+
+.form-review__button {
+  font-size: 21px;
+  font-weight: $weight-bold;
+  line-height: 26px;
+  color: $color-white;
+  background-color: $color-sky;
+}
+

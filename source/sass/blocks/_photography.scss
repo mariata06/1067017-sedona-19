@@ -1,0 +1,32 @@
+.photography__list {
+  @include liststyle;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+}
+
+.photography__title {
+  @include title($size-title, $height-title, $weight-bold, $color-black);
+}
+
+.photography__description {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.photography__content {
+  margin: 0;
+}
+
+.photography__caption,
+.photography-item__author,
+.photography-item__likes {
+  font-weight: 700;
+  line-height: 24px;
+  color: $color-black;
+}
+
+.photography-item__author {
+  font-weight: 400;
+  text-transform: none;
+}

@@ -1,0 +1,27 @@
+.social-list {
+  width: 152px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+  @include margintb0;
+  @include liststyle;
+}
+
+.social-list__item-icon {
+  display: block;
+  width: 46px;
+  height: 48px;
+  fill: $color-white;
+  background-color: $color-sky;
+  position: relative;
+  margin-right: 6px;
+}
+
+.social-list__item-icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

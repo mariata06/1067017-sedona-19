@@ -1,0 +1,38 @@
+.intro {
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-position: center 363px, top center;
+  background-repeat: no-repeat, no-repeat;
+  width: 320px;
+
+  &--photo,
+  &--form {
+    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+    background-position: center 133px, -300px center;
+    background-repeat: no-repeat, no-repeat;
+    height: 158px;
+  }
+}
+
+.intro__welcome-logo {
+  margin-top: 90px;
+  margin-bottom: 60px;
+
+  &--photo,
+  &--form {
+    margin-top: 40px;
+    text-align: center;
+    width: 230px;
+    height: 40px;
+  }
+}
+
+.intro__title {
+  @include title($size-title, $height-title, $weight-bold, $color-black);
+  margin-top: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.intro__description {
+  line-height: 26px;
+}

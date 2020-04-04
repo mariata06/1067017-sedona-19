@@ -1,0 +1,94 @@
+.advantages__list {
+  @include liststyle;
+}
+
+.advantages__description {
+  margin-bottom: 45px;
+
+  &--first,
+  &--second {
+    color: $color-white;
+  }
+}
+
+.advantages__list-item {
+  &:first-of-type {
+    background-color: $color-sky;
+    background-image: url("../img/bg-triangle.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 468px;
+    position: relative;
+  }
+
+  &:first-of-type img,
+  &:nth-child(5) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:nth-child(2) {
+    background-image: url("../img/icon-house.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 15%;
+  }
+
+  &:nth-child(3) {
+    background-image: url("../img/icon-gift.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 15%;
+  }
+
+  &:nth-child(4) {
+    background-image: url("../img/icon-burger.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 15%;
+  }
+
+  &:nth-child(5) {
+    min-height: 451px;
+    position: relative;
+    background-color: $color-sky;
+  }
+
+  &:nth-child(6),
+  &:nth-child(7),
+  &:nth-child(8) {
+    background-color: $color-extralight-grey;
+
+    @include global-padding;
+    @include border-bottom;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.advantages__title {
+  @include margintb0;
+  @include title($size-title, $height-title, $weight-bold, $color-black);
+
+  &--first,
+  &--second {
+    padding-top: 45px;
+
+    @include title($size-title, $height-title, $weight-bold, $color-white);
+  }
+
+  &--third,
+  &--fourth,
+  &--fifth {
+    padding-top: 30px;
+  }
+}
+
+.advantages__number {
+  &--first,
+  &--second {
+    color: $color-white;
+  }
+}

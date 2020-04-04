@@ -1,0 +1,28 @@
+.booking {
+  background-color: $color-white;
+}
+
+.booking__title {
+  font-size: 21px;
+  font-weight: $weight-bold;
+  line-height: 26px;
+  color: $color-black;
+}
+
+.booking__description {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.booking__map iframe {
+  width: 100%;
+  border: none;
+}
+
+.booking__button {
+  font-size: 21px;
+  font-weight: $weight-bold;
+  line-height: 26px;
+  color: $color-white;
+  background-color: $color-sky;
+}

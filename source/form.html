@@ -4,36 +4,40 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="page-header">
-    <nav class="page-header__site-nav site-nav visually-hidden">
+    <nav class="page-header__site-nav site-nav">
       <ul class="site-nav__list">
         <li class="site-nav__list-item">
-          <a href="site-nav__list-link">Главная</a>
+          <a href="#" class="site-nav__list-link">Главная</a>
         </li>
         <li class="site-nav__list-item">
-          <a href="site-nav__list-link">фото и видео</a>
+          <a href="photo.html" class="site-nav__list-link">фото и видео</a>
         </li>
         <li class="site-nav__list-item">
-          <a href="site-nav__list-link">Форма отзыва</a>
+          <a href="form.html" class="site-nav__list-link">Форма отзыва</a>
         </li>
         <li class="site-nav__list-item">
-          <a href="site-nav__list-link">HTML academy</a>
+          <a href="https://htmlacademy.ru">HTML academy</a>
         </li>
       </ul>
     </nav>
-    <a href="index.html">
-      <img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="page-header__logo">
-    </a>
-
+    <img src="img/logo-sedona-mobile.svg" alt="Лого Седона" class="page-header__logo">
     <div class="page-header__menu">
     </div>
   </header>
 
-  <main class="page-main">
+  <main class="page-main page-main--form">
+
+    <section class="intro intro--form">
+      <img src="img/text-sedona.svg" width="320" height="280" alt="Добро пожаловать в Седону"
+        class="intro__welcome-logo--form">
+    </section>
 
     <section class="review">
       <h2 class="review__title">Оставьте свой отзыв</h2>
@@ -46,24 +50,29 @@
       <div class="form-review__content">
         <form action="https://echo.htmlacademy.ru" method="post">
           <p class="form-review__paragraph">Представьтесь:</p>
-          <div class="form-review__username">
+          <div class="form-review__input-container username">
             <label>Имя*:</label>
             <input type="text" name="username" value="Петр" required>
           </div>
-          <div class="form-review__usersurname">
+          <div class="form-review__input-container usersurname">
             <label>Фамилия*:</label>
             <input type="text" name="usersurname" value="Иванов" required>
           </div>
-          <div class="form-review__usermiddlename">
+          <div class="form-review__input-container usermiddlename">
             <label>Отчество:</label>
             <input type="text" name="usermiddlename" value="Александрович">
           </div>
           <p class="form-review__paragraph">Контакная информация:</p>
-          <label>Контактный телефон*:</label>
-          <input type="tel" name="userphonenumber" value="Введите телефон" required>
 
-          <label>Электронная почта*:</label>
-          <input type="email" name="useremail" value="Введите e-mail" required>
+          <div class="form-review__input-container userphonenumber">
+            <label>Контактный телефон*:</label>
+            <input type="tel" name="userphonenumber" value="Введите телефон" required>
+          </div>
+
+          <div class="form-review__input-container useremail">
+            <label>Электронная почта*:</label>
+            <input type="email" name="useremail" value="Введите e-mail" required>
+          </div>
 
           <p class="form-review__paragraph">Вaше общее впечатление:</p>
           <div class="form-review__impression-list impression-list">
@@ -111,23 +120,25 @@
     <ul class="page-footer__social-list social-list">
       <li class="social-list__item">
         <a href="https://twitter.com/" aria-label="twitter" class="social-list__item-icon">
-          <img src="https://via.placeholder.com/150x150" alt="icon-twitter">
+          <img src="img/icon-twitter.svg" alt="icon-twitter" width="17" height="15">
         </a>
       </li>
       <li class="social-list__item">
         <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon">
-          <img src="https://via.placeholder.com/150x150" alt="icon-facebook">
+          <img src="img/icon-facebook.svg" alt="icon-facebook" width="12" height="22">
         </a>
       </li>
       <li class="social-list__item">
         <a href="https://youtube.com/" aria-label="youtube" class="social-list__item-icon">
-          <img src="https://via.placeholder.com/150x150" alt="icon-youtube">
+          <img src="img/icon-youtube.svg" alt="icon-youtube" width="20" height="16">
         </a>
       </li>
     </ul>
     <p class="page-footer__copyright">Разработано
-      <a href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="https://via.placeholder.com/150x150" alt="Лого HTMLacademy" class="page-footer__copyright-logo">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-logo">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+          <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+        </svg>
       </a>
     </p>
   </footer>
@@ -137,7 +148,7 @@
     <div class="popup__content">
       <h3 class="popup__title">Что-то пошло не так!</h3>
       <p class="popup__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button type="button">Ок</button>
+      <button type="button" class="popup__button">Ок</button>
     </div>
   </section>
 
@@ -148,7 +159,7 @@
       <p class="popup__description">
         Спасибо за ваше участие, ваш отзыв уже поступил к нам.
         В ближайшее время мы опубликуем его на сайте.</p>
-      <button type="button">Закрыть окно</button>
+      <button type="button" class="popup__button">Закрыть окно</button>
     </div>
   </section>
 

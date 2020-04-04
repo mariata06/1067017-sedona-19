@@ -1,0 +1,12 @@
+.review__title {
+  @include margintb0;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include title($size-title, $height-title, $weight-bold, $color-black);
+}
+
+.review__description {
+  line-height: 24px;
+  color: $color-black;
+}
