@@ -1,0 +1,18 @@
+.page-header {
+  width: 320px;
+  margin: 0 auto;
+
+  @include side-shadow;
+}
+
+.page-header__menu {
+  height: 56px;
+  color: white;
+  position: relative;
+}
+
+.page-header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

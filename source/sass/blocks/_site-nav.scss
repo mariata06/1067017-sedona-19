@@ -1,0 +1,31 @@
+.site-nav {
+  height: 223px;
+  color: $color-white;
+  background-color: $color-sky;
+}
+
+.site-nav__list {
+  @include liststyle;
+}
+
+.site-nav__list-item {
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  //color: $color-white;
+  height: 55px;
+  padding: 7.5px 0 7.5px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-sky-medium;
+  }
+
+  &:not(:first-child) {
+    border-top: 1px solid $color-sky-light;
+  }
+}
+
+.site-nav__list-link {
+  color: $color-white;
+  display: block;
+}

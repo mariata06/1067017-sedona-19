@@ -1,0 +1,21 @@
+.popup {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.popup__title {
+  @include title($size-title, $height-title, $weight-bold, $color-black);
+}
+
+.popup__description {
+  line-height: 24px;
+  color: $color-black;
+}
+
+.popup__button {
+  font-size: 18px;
+  font-weight: $weight-bold;
+  line-height: 26px;
+  color: $color-white;
+  background-color: $color-sky;
+}

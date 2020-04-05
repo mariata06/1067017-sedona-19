@@ -1,0 +1,6 @@
+.impression-list label {
+  display: block;
+
+  @include title($size-title, $height-title, $weight-bold, $color-black);
+  text-transform: none;
+}

@@ -1,0 +1,33 @@
+@mixin margintb0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin liststyle {
+  list-style: none;
+  padding-left: 0;
+}
+
+@mixin side-shadow {
+  box-shadow: 0 5px 15px 0 rgba(00, 11, 11, 0.2);
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid $color-light-grey;
+}
+
+@mixin global-padding {
+  padding: 0 20px 0 20px;
+}
+
+@mixin title ($size-title, $height-title, $weight, $color) {
+  font-size: $size-title;
+  line-height: $height-title;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text ($weight, $color) {
+  font-weight: $weight;
+  color: $color;
+}

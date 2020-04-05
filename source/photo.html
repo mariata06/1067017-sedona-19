@@ -4,29 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="page-header">
-    <nav class="page-header__site-nav site-nav visually-hidden">
+    <nav class="page-header__site-nav site-nav">
       <ul class="site-nav__list">
         <li class="site-nav__list-item">
-          <a href="site-nav__list-link">Главная</a>
+          <a href="index.html" class="site-nav__list-link">Главная</a>
         </li>
         <li class="site-nav__list-item">
-          <a href="site-nav__list-link">фото и видео</a>
+          <a href="photo.html" class="site-nav__list-link">фото и видео</a>
         </li>
         <li class="site-nav__list-item">
-          <a href="site-nav__list-link">Форма отзыва</a>
+          <a href="form.html" class="site-nav__list-link">Форма отзыва</a>
         </li>
         <li class="site-nav__list-item">
-          <a href="site-nav__list-link">HTML academy</a>
+          <a href="https://htmlacademy.ru">HTML academy</a>
         </li>
       </ul>
     </nav>
     <a href="index.html">
-      <img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="page-header__logo">
+      <img src="img/logo-sedona-mobile.svg" alt="Лого Седона" class="page-header__logo">
     </a>
     <div class="page-header__menu">
     </div>
@@ -34,44 +36,51 @@
 
   <main class="page-main">
 
+    <section class="intro intro--photo">
+      <img src="img/text-sedona.svg" width="320" height="280" alt="Добро пожаловать в Седону"
+        class="intro__welcome-logo--photo">
+    </section>
+
     <section class="photography">
-      <img src="https://via.placeholder.com/150x150" alt="Лого Седона" class="photography__logo">
-      <h1 class="phtography__title">Фото и видео</h1>
+      <h1 class="photography__title">Фото и видео</h1>
       <p class="photography__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
         политике и экономике.</p>
       <ul class="photography__list">
-        <li class="photography__list-item photography-item">
-          <figure class="photography-item__content">
-            <img src="https://via.placeholder.com/150x150" alt="Родные просторы" class="photography-item__picture">
-            <figcaption>Родные просторы</figcaption>
+        <li class="photography__item">
+          <figure class="photography__content">
+            <img src="img/photo-sunset-mobile@1x.jpg" width="320" height="280" alt="Неродные просторы"
+              class="photography-item__picture">
+            <figcaption class="photography__caption">Неродные просторы</figcaption>
           </figure>
           <p class="photography-item__author">Автор фото: Борис</p>
           <span class="photography-item__likes">1350</span>
         </li>
 
         <li class="photography__list-item photography-item">
-          <figure class="photography-item__content">
-            <img src="https://via.placeholder.com/150x150" alt="Местная растительность"
+          <figure class="photography__content">
+            <img src="img/photo-cactus-mobile@1x.jpg" width="320" height="280" alt="Местная растительность"
               class="photography-item__picture">
-            <figcaption>Местная растительность</figcaption>
+            <figcaption class="photography__caption">Местная растительность</figcaption>
           </figure>
           <p class="photography-item__author">Автор фото: Сергей</p>
           <span class="photography-item__likes">143</span>
         </li>
 
         <li class="photography__list-item photography-item">
-          <figure class="photography-item__content">
-            <img src="https://via.placeholder.com/150x150" alt="Дорога на север" class="photography-item__picture">
-            <figcaption>Дорога на север</figcaption>
+          <figure class="photography__content">
+            <img src="img/photo-roads-mobile@1x.jpg" width="320" height="280" alt="Дорога на север"
+              class="photography-item__picture">
+            <figcaption class="photography__caption">Дорога на север</figcaption>
           </figure>
           <p class="photography-item__author">Автор фото: Петр</p>
           <span class="photography-item__likes">96</span>
         </li>
 
         <li class="photography__list-item photography-item">
-          <figure class="photography-item__content">
-            <img src="https://via.placeholder.com/150x150" alt="Мост дьявола" class="photography-item__picture">
-            <figcaption>Мост дьявола</figcaption>
+          <figure class="photography__content">
+            <img src="img/photo-bridge-mobile@1x.jpg" width="320" height="280" alt="Мост дьявола"
+              class="photography-item__picture">
+            <figcaption class="photography__caption">Мост дьявола</figcaption>
           </figure>
           <p class="photography-item__author">Автор фото: Антон</p>
           <span class="photography-item__likes">254</span>
@@ -84,8 +93,7 @@
       <h2 class="video__title">Все еще сомневаетесь?</h2>
       <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
         раз!</p>
-      <video class="video__content" width="320" height="201" controls="controls"
-        poster="https://via.placeholder.com/150x150">
+      <video class="video__content" width="320" height="201" controls="controls" poster="img/video-mobile@1x.jpg">
         <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
         <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
         <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
@@ -102,23 +110,28 @@
     <ul class="page-footer__social-list social-list">
       <li class="social-list__item">
         <a href="https://twitter.com/" aria-label="twitter" class="social-list__item-icon">
-          <img src="https://via.placeholder.com/150x150" alt="icon-twitter">
+          <img src="img/icon-twitter.svg" alt="icon-twitter" width="17" height="15">
         </a>
       </li>
       <li class="social-list__item">
         <a href="https://facebook.com/" aria-label="facebook" class="social-list__item-icon">
-          <img src="https://via.placeholder.com/150x150" alt="icon-facebook">
+          <img src="img/icon-facebook.svg" alt="icon-facebook" width="12" height="22">
         </a>
       </li>
       <li class="social-list__item">
         <a href="https://youtube.com/" aria-label="youtube" class="social-list__item-icon">
-          <img src="https://via.placeholder.com/150x150" alt="icon-youtube">
+          <img src="img/icon-youtube.svg" alt="icon-youtube" width="20" height="16">
         </a>
       </li>
     </ul>
     <p class="page-footer__copyright">Разработано
-      <a href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="https://via.placeholder.com/150x150" alt="Лого HTMLacademy" class="page-footer__copyright-logo">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-logo">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09"
+          enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+          <path
+            d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" />
+        </svg>
       </a>
     </p>
   </footer>
