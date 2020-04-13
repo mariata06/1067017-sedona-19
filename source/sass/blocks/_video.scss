@@ -1,3 +1,18 @@
+.video {
+  @media (min-width: $tablet-width) {
+    padding: 110px 60px 0 60px;
+    max-width: 768px;
+    height: auto;
+    max-height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 110px 0 0 0;
+  }
+}
+
 .video__description {
   margin-top: 40px;
   margin-bottom: 40px;

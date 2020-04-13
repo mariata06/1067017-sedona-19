@@ -25,4 +25,10 @@
   line-height: 26px;
   color: $color-white;
   background-color: $color-sky;
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 458px;
+  }
 }

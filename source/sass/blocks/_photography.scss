@@ -1,21 +1,60 @@
-.photography__list {
-  @include liststyle;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: left;
+.photography {
+  @media (min-width: $tablet-width) {
+    padding: 110px 60px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 110px 0 0 0;
+  }
+}
+
+.photography__item {
+  &:nth-of-type(2),
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    @media (min-width: $tablet-width) {
+      min-width: 324px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 400px;
+    }
+  }
+}
+
+.photography__content {
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    min-width: 400px;
+  }
 }
 
 .photography__title {
   @include title($size-title, $height-title, $weight-bold, $color-black);
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
 }
 
 .photography__description {
   padding-left: 24px;
   padding-right: 24px;
-}
 
-.photography__content {
-  margin: 0;
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
 }
 
 .photography__caption,

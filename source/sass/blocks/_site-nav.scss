@@ -1,11 +1,30 @@
 .site-nav {
   height: 223px;
-  color: $color-white;
-  background-color: $color-sky;
+
+  @media (min-width: $tablet-width) {
+    height: 56px;
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .site-nav__list {
   @include liststyle;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .site-nav__list-item {
@@ -16,16 +35,34 @@
   height: 55px;
   padding: 7.5px 0 7.5px 0;
 
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
   &:not(:last-child) {
     border-bottom: 1px solid $color-sky-medium;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+    }
   }
 
   &:not(:first-child) {
     border-top: 1px solid $color-sky-light;
+
+    @media (min-width: $tablet-width) {
+      border-top: none;
+    }
   }
 }
 
 .site-nav__list-link {
   color: $color-white;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    color: $color-black;
+  }
 }

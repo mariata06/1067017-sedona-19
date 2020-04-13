@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -14,7 +16,7 @@
     <nav class="page-header__site-nav site-nav">
       <ul class="site-nav__list">
         <li class="site-nav__list-item">
-          <a href="#" class="site-nav__list-link">Главная</a>
+          <a href="index.html" class="site-nav__list-link">Главная</a>
         </li>
         <li class="site-nav__list-item">
           <a href="photo.html" class="site-nav__list-link">фото и видео</a>
@@ -27,7 +29,12 @@
         </li>
       </ul>
     </nav>
-    <img src="img/logo-sedona-mobile.svg" alt="Лого Седона" class="page-header__logo">
+    <a href="index.html">
+      <picture>
+        <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1280px)">
+        <img src="img/logo-sedona-mobile.svg" alt="Лого Седона" class="page-header__logo">
+      </picture>
+    </a>
     <div class="page-header__menu">
     </div>
   </header>
@@ -47,70 +54,84 @@
 
     <section class="form-review">
       <h2 class="visually-hidden">Форма отзыва</h2>
-      <div class="form-review__content">
         <form action="https://echo.htmlacademy.ru" method="post">
-          <p class="form-review__paragraph">Представьтесь:</p>
-          <div class="form-review__input-container user-name">
-            <label>Имя*:</label>
-            <input type="text" name="user-name" value="Петр" required>
+          <div class="form-review__content">
+            <div class="form-review__personal-data">
+              <p class="form-review__paragraph">Представьтесь:</p>
+              <div class="form-review__input-container user-name">
+                <label>Имя*:</label>
+                <input type="text" name="user-name" value="Петр" required>
+              </div>
+              <div class="form-review__input-container user-surname">
+                <label>Фамилия*:</label>
+                <input type="text" name="user-surname" value="Иванов" required>
+              </div>
+              <div class="form-review__input-container user-middlename">
+                <label>Отчество:</label>
+                <input type="text" name="user-middlename" value="Александрович">
+              </div>
+            </div>
+
+            <div class="form-review__contacts">
+              <p class="form-review__paragraph">Контакная информация:</p>
+              <div class="form-review__input-container user-phonenumber">
+                <label>Контактный телефон*:</label>
+                <input type="tel" class="form-review__input-phone" name="user-phonenumber" value="Введите телефон" required>
+              </div>
+
+              <div class="form-review__input-container user-email">
+                <label>Электронная почта*:</label>
+                <input type="email" class="form-review__input-email" name="user-email" value="Введите e-mail" required>
+              </div>
+            </div>
+
+            <div class="form-review__impression">
+              <p class="form-review__paragraph">Вaше общее впечатление:</p>
+              <div class="form-review__impression-list impression-list">
+                <input type="radio" name="impression" id="positive" value="positive"
+                  class="visually-hidden impression-list__input" checked>
+                <label for="positive" class="impression-list__label">Скорее положительное</label>
+
+                <input type="radio" name="impression" id="negative" value="negative"
+                  class="visually-hidden impression-list__input">
+                <label for="negative" class="impression-list__label">Скорее отрицательное</label>
+
+                <input type="radio" name="impression" id="neutral" value="neutral"
+                  class="visually-hidden impression-list__input">
+                <label for="neutral" class="impression-list__label">Затрудняюсь ответить</label>
+              </div>
+            </div>
+
+            <div class="form-review__attraction">
+              <p class="form-review__paragraph">Посещенные достопримечательности:</p>
+              <div class="form-review__attraction-list attraction-list">
+                <input type="checkbox" id="devil-bridge" name="attraction" class="visually-hidden attraction-list__input"
+                  checked>
+                <label for="devil-bridge" class="attraction-list__label">Мост Дьявола</label>
+
+                <input type="checkbox" id="bell-rock" name="attraction" class="visually-hidden attraction-list__input"
+                  checked>
+                <label for="bell-rock" class="attraction-list__label">Гора-Колокол</label>
+
+                <input type="checkbox" id="slide-park" name="attraction" class="visually-hidden attraction-list__input"
+                  checked>
+                <label for="slide-park" class="attraction-list__label">Слайд-парк</label>
+
+                <input type="checkbox" id="red-rock" name="attraction" class="visually-hidden attraction-list__input">
+                <label for="red-rock" class="attraction-list__label">Красные скалы</label>
+              </div>
+            </div>
+
+            <div class="form-review__user-review">
+              <p class="form-review__paragraph">Опишите свои эмоции:</p>
+              <textarea cols="35" rows="5" placeholder="Опишите подробно все свои восторги" name="usermessage"></textarea>
+            </div>
+            <button type="submit" class="form-review__button">Отправить отзыв</button>
+            <p class="form-review__required">* — обязательные поля</p>
           </div>
-          <div class="form-review__input-container user-surname">
-            <label>Фамилия*:</label>
-            <input type="text" name="user-surname" value="Иванов" required>
-          </div>
-          <div class="form-review__input-container user-middlename">
-            <label>Отчество:</label>
-            <input type="text" name="user-middlename" value="Александрович">
-          </div>
-          <p class="form-review__paragraph">Контакная информация:</p>
 
-          <div class="form-review__input-container user-phonenumber">
-            <label>Контактный телефон*:</label>
-            <input type="tel" name="user-phonenumber" value="Введите телефон" required>
-          </div>
-
-          <div class="form-review__input-container user-email">
-            <label>Электронная почта*:</label>
-            <input type="email" name="user-email" value="Введите e-mail" required>
-          </div>
-
-          <p class="form-review__paragraph">Вaше общее впечатление:</p>
-          <div class="form-review__impression-list impression-list">
-            <input type="radio" name="impression" id="positive" value="positive"
-              class="visually-hidden impression-list__input" checked>
-            <label for="positive" class="impression-list__label">Скорее положительное</label>
-
-            <input type="radio" name="impression" id="negative" value="negative"
-              class="visually-hidden impression-list__input">
-            <label for="negative" class="impression-list__label">Скорее отрицательное</label>
-
-            <input type="radio" name="impression" id="neutral" value="neutral"
-              class="visually-hidden impression-list__input">
-            <label for="neutral" class="impression-list__label">Затрудняюсь ответить</label>
-          </div>
-          <p class="form-review__paragraph">Посещенные достопримечательности:</p>
-          <div class="form-review__attraction-list attraction-list">
-            <input type="checkbox" id="devil-bridge" name="attraction" class="visually-hidden attraction-list__input"
-              checked>
-            <label for="devil-bridge" class="attraction-list__label">Мост Дьявола</label>
-
-            <input type="checkbox" id="bell-rock" name="attraction" class="visually-hidden attraction-list__input"
-              checked>
-            <label for="bell-rock" class="attraction-list__label">Гора-Колокол</label>
-
-            <input type="checkbox" id="slide-park" name="attraction" class="visually-hidden attraction-list__input"
-              checked>
-            <label for="slide-park" class="attraction-list__label">Слайд-парк</label>
-
-            <input type="checkbox" id="red-rock" name="attraction" class="visually-hidden attraction-list__input">
-            <label for="red-rock" class="attraction-list__label">Красные скалы</label>
-          </div>
-
-          <p class="form-review__paragraph">Опишите свои эмоции:</p>
-          <textarea cols="35" rows="5" placeholder="Опишите подробно все свои восторги" name="usermessage"></textarea>
-          <button type="submit" class="form-review__button">Отправить отзыв</button>
         </form>
-      </div>
+
     </section>
 
   </main>

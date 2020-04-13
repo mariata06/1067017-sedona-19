@@ -3,4 +3,16 @@
 
   @include title($size-title, $height-title, $weight-bold, $color-black);
   text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    //min-width: 324px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 240px;
+    text-align: center;
+    display: inline-block;
+  }
 }
