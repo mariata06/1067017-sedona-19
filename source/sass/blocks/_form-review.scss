@@ -28,30 +28,27 @@
   }
 }
 
-.form-review__input-container {
+.user-name,
+.user-surname,
+.user-middlename {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-.form-review__input-container .user-phonenumber,
-.form-review__input-container .user-email {
-  @media (min-width: $tablet-width) {
-    width: 50%;
-    //display: flex;
-    //flex: 1 0 auto;
-  }
-
+.user-phonenumber,
+.user-email {
   @media (min-width: $desktop-width) {
-    width: 470px;
+    width: 50%;
     display: flex;
-    //flex: 1 0 auto;
+    justify-content: space-between;
   }
 }
 
-.user-phonenumber,
-.user-email {
-  display: inline-block;
+.form-review__contacts .form-review__paragraph {
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .user-email {
@@ -61,6 +58,10 @@
 .form-review__input-phone,
 .form-review__input-email {
   width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 315px;
+  }
 }
 
 .form-review textarea {
@@ -106,7 +107,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    justify-content: space-between;
   }
 }
 

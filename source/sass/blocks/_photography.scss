@@ -25,6 +25,7 @@
 }
 
 .photography__content {
+  position: relative;
   margin: 0;
 
   @media (min-width: $desktop-width) {
@@ -63,9 +64,26 @@
   font-weight: 700;
   line-height: 24px;
   color: $color-black;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    color: $color-white;
+  }
 }
 
 .photography-item__author {
   font-weight: 400;
   text-transform: none;
+}
+
+.photography__caption {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.photography__caption h3 {
+  @include margintb0;
 }

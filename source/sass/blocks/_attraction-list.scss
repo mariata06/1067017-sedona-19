@@ -11,8 +11,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 240px;
+    width: 240px;
     text-align: center;
     display: inline-block;
+  }
+}
+
+.attraction-list__label {
+  @media (min-width: $tablet-width) {
+    width: 324px;
   }
 }

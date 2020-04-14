@@ -6,8 +6,8 @@
 .advantages__description {
   margin-bottom: 45px;
 
-  &--first,
-  &--second {
+  &--sedona,
+  &--bridge {
     color: $color-white;
   }
 }
@@ -19,10 +19,6 @@
   background-repeat: no-repeat;
   min-height: 209px;
 
-  &:nth-child(2) {
-    order: -1;
-  }
-
   @media (min-width: $tablet-width) {
     background-image: none;
     max-width: 256px;
@@ -31,11 +27,17 @@
   @media (min-width: $desktop-width) {
     max-width: 400px;
   }
+
+  &--bridge {
+    @media (min-width: $tablet-width) {
+      order: 0;
+    }
+  }
 }
 
 .advantages__item {
-  &--first,
-  &--second {
+  &--sedona,
+  &--bridge {
     background-color: $color-sky;
     max-height: 469px;
 
@@ -48,17 +50,11 @@
       display: flex;
       max-height: 256px;
     }
-
-    &--second .advantages__picture {
-      @media (min-width: $tablet-width) {
-        order: -1;
-      }
-    }
   }
 
-  &:nth-child(2),
-  &:nth-child(3),
-  &:nth-child(4) {
+  &--house,
+  &--gift,
+  &--burger {
     background-position: top left;
     background-repeat: no-repeat;
     background-size: 15%;
@@ -76,21 +72,21 @@
     }
   }
 
-  &:nth-child(2) {
+  &--house {
     background-image: url("../img/icon-house.svg");
   }
 
-  &:nth-child(3) {
+  &--gift {
     background-image: url("../img/icon-gift.svg");
   }
 
-  &:nth-child(4) {
+  &--burger {
     background-image: url("../img/icon-burger.svg");
   }
 
-  &:nth-child(6),
-  &:nth-child(7),
-  &:nth-child(8) {
+  &--area,
+  &--road,
+  &--crowdy {
     background-color: $color-extralight-grey;
 
     @include global-padding;
@@ -116,23 +112,31 @@
   @include margintb0;
   @include title($size-title, $height-title, $weight-bold, $color-black);
 
-  &--first,
-  &--second {
+  &--sedona,
+  &--bridge {
     padding-top: 45px;
 
     @include title($size-title, $height-title, $weight-bold, $color-white);
   }
 
-  &--third,
-  &--fourth,
-  &--fifth {
+  &--area,
+  &--road,
+  &--crowdy {
     padding-top: 30px;
   }
 }
 
 .advantages__number {
-  &--first,
-  &--second {
+  &--sedona,
+  &--bridge {
     color: $color-white;
+  }
+}
+
+.advantages__image {
+  &--bridge {
+    @media (min-width: $tablet-width) {
+      order: -1;
+    }
   }
 }
