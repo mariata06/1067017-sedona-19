@@ -33,18 +33,29 @@ body {
   color: $color-greyblack;
 }
 
+.page-main {
+  min-width: 320px;
+  margin: 0 auto;
+  //background-color: $color-blue-black;
+
+  @media (min-width: 768px) {
+    width: 768px;
+    //padding: 0 40px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+    //padding: 0 40px;
+  }
+}
+
+
 img {
   max-width: 100%;
   height: auto;
+  //max-height: 100%;
 }
 
 a {
   text-decoration: none;
-}
-
-.page-main {
-  width: 320px;
-  margin: 0 auto;
-
-  @include side-shadow;
 }

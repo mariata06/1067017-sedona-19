@@ -1,18 +1,40 @@
 .page-header {
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
+  color: $color-white;
+  background-color: $color-sky;
 
-  @include side-shadow;
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    //padding: 50px 20px;
+    min-height: 56px;
+    background-color: $color-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0 40px;
+  }
 }
 
 .page-header__menu {
   height: 56px;
-  color: white;
+  background-color: $color-white;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
+
+  @media (min-width: $tablet-width) {
+    top: 15px;
+  }
 }

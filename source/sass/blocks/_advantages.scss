@@ -1,63 +1,92 @@
-.advantages__list {
-  @include liststyle;
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages__description {
   margin-bottom: 45px;
 
-  &--first,
-  &--second {
+  &--sedona,
+  &--bridge {
     color: $color-white;
   }
 }
 
-.advantages__list-item {
-  &:first-of-type {
+.advantages__info {
+  background-color: $color-sky;
+  background-image: url("../img/bg-triangle.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 209px;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    max-width: 256px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 400px;
+  }
+
+  &--bridge {
+    @media (min-width: $tablet-width) {
+      order: 0;
+    }
+  }
+}
+
+.advantages__item {
+  &--sedona,
+  &--bridge {
     background-color: $color-sky;
-    background-image: url("../img/bg-triangle.svg");
-    background-position: center top;
+    max-height: 469px;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      max-height: 256px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      max-height: 256px;
+    }
+  }
+
+  &--house,
+  &--gift,
+  &--burger {
+    background-position: top left;
     background-repeat: no-repeat;
-    min-height: 468px;
-    position: relative;
+    background-size: 15%;
+    min-height: 139px;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      max-width: 256px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+      min-width: 400px;
+      min-height: 330px;
+    }
   }
 
-  &:first-of-type img,
-  &:nth-child(5) img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
-  &:nth-child(2) {
+  &--house {
     background-image: url("../img/icon-house.svg");
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: 15%;
   }
 
-  &:nth-child(3) {
+  &--gift {
     background-image: url("../img/icon-gift.svg");
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: 15%;
   }
 
-  &:nth-child(4) {
+  &--burger {
     background-image: url("../img/icon-burger.svg");
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: 15%;
   }
 
-  &:nth-child(5) {
-    min-height: 451px;
-    position: relative;
-    background-color: $color-sky;
-  }
-
-  &:nth-child(6),
-  &:nth-child(7),
-  &:nth-child(8) {
+  &--area,
+  &--road,
+  &--crowdy {
     background-color: $color-extralight-grey;
 
     @include global-padding;
@@ -65,6 +94,17 @@
 
     padding-left: 20px;
     padding-right: 20px;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      max-width: 256px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+      min-width: 400px;
+      min-height: 256px;
+    }
   }
 }
 
@@ -72,23 +112,31 @@
   @include margintb0;
   @include title($size-title, $height-title, $weight-bold, $color-black);
 
-  &--first,
-  &--second {
+  &--sedona,
+  &--bridge {
     padding-top: 45px;
 
     @include title($size-title, $height-title, $weight-bold, $color-white);
   }
 
-  &--third,
-  &--fourth,
-  &--fifth {
+  &--area,
+  &--road,
+  &--crowdy {
     padding-top: 30px;
   }
 }
 
 .advantages__number {
-  &--first,
-  &--second {
+  &--sedona,
+  &--bridge {
     color: $color-white;
+  }
+}
+
+.advantages__image {
+  &--bridge {
+    @media (min-width: $tablet-width) {
+      order: -1;
+    }
   }
 }

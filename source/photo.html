@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -28,7 +30,10 @@
       </ul>
     </nav>
     <a href="index.html">
-      <img src="img/logo-sedona-mobile.svg" alt="Лого Седона" class="page-header__logo">
+      <picture>
+        <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+        <img src="img/logo-sedona-mobile.svg" alt="Лого Седона" class="page-header__logo">
+      </picture>
     </a>
     <div class="page-header__menu">
     </div>
@@ -45,47 +50,70 @@
       <h1 class="photography__title">Фото и видео</h1>
       <p class="photography__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
         политике и экономике.</p>
-      <ul class="photography__list">
-        <li class="photography__item">
-          <figure class="photography__content">
-            <img src="img/photo-sunset-mobile@1x.jpg" width="320" height="280" alt="Неродные просторы"
-              class="photography-item__picture">
-            <figcaption class="photography__caption">Неродные просторы</figcaption>
-          </figure>
-          <p class="photography-item__author">Автор фото: Борис</p>
-          <span class="photography-item__likes">1350</span>
-        </li>
 
-        <li class="photography__list-item photography-item">
-          <figure class="photography__content">
-            <img src="img/photo-cactus-mobile@1x.jpg" width="320" height="280" alt="Местная растительность"
-              class="photography-item__picture">
-            <figcaption class="photography__caption">Местная растительность</figcaption>
-          </figure>
-          <p class="photography-item__author">Автор фото: Сергей</p>
-          <span class="photography-item__likes">143</span>
-        </li>
+      <div class="photography__item">
+        <figure class="photography__content">
+          <picture>
+            <source srcset="img/photo-sunset-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source srcset="img/photo-sunset-tablet@1x.jpg" media="(min-width: 768px)">
+            <img src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" class="photography-item__picture">
+          </picture>
+          <figcaption class="photography__caption">
+            <h3>Неродные просторы</h3>
+            <p class="photography-item__author">Автор фото: Борис</p>
+            <span class="photography-item__likes">1350</span>
+          </figcaption>
+        </figure>
 
-        <li class="photography__list-item photography-item">
-          <figure class="photography__content">
-            <img src="img/photo-roads-mobile@1x.jpg" width="320" height="280" alt="Дорога на север"
-              class="photography-item__picture">
-            <figcaption class="photography__caption">Дорога на север</figcaption>
-          </figure>
-          <p class="photography-item__author">Автор фото: Петр</p>
-          <span class="photography-item__likes">96</span>
-        </li>
+      </div>
 
-        <li class="photography__list-item photography-item">
-          <figure class="photography__content">
-            <img src="img/photo-bridge-mobile@1x.jpg" width="320" height="280" alt="Мост дьявола"
+      <div class="photography__item">
+        <figure class="photography__content">
+          <picture>
+            <source srcset="img/photo-cactus-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source srcset="img/photo-cactus-tablet@1x.jpg" media="(min-width: 768px)">
+              <img src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" class="photography-item__picture">
+          </picture>
+          <figcaption class="photography__caption">
+            <h3>Местная растительность</h3>
+            <p class="photography-item__author">Автор фото: Сергей</p>
+            <span class="photography-item__likes">143</span>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <div class="photography__item">
+        <figure class="photography__content">
+          <picture>
+            <source srcset="img/photo-roads-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source srcset="img/photo-roads-tablet@1x.jpg" media="(min-width: 768px)">
+              <img src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север"
               class="photography-item__picture">
-            <figcaption class="photography__caption">Мост дьявола</figcaption>
-          </figure>
-          <p class="photography-item__author">Автор фото: Антон</p>
-          <span class="photography-item__likes">254</span>
-        </li>
-      </ul>
+          </picture>
+          <figcaption class="photography__caption">
+            <h3>Дорога на север</h3>
+            <p class="photography-item__author">Автор фото: Петр</p>
+            <span class="photography-item__likes">96</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="photography__item">
+        <figure class="photography__content">
+          <picture>
+            <source srcset="img/photo-bridge-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source srcset="img/photo-bridge-tablet@1x.jpg" media="(min-width: 768px)">
+              <img src="img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола" class="photography-item__picture">
+          </picture>
+          <figcaption class="photography__caption">
+            <h3>Мост дьявола</h3>
+            <p class="photography-item__author">Автор фото: Антон</p>
+            <span class="photography-item__likes">254</span>
+          </figcaption>
+        </figure>
+      </div>
+
     </section>
 
     <section class="video">
@@ -93,15 +121,19 @@
       <h2 class="video__title">Все еще сомневаетесь?</h2>
       <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
         раз!</p>
-      <video class="video__content" width="320" height="201" controls="controls" poster="img/video-mobile@1x.jpg">
-        <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
-        <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-        <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
-        Тег video не поддерживается вашим браузером.
-        <a href="video/duel.mp4">Скачайте видео</a>.
-        <div class="video__bar"></div>
-        <div class="video__button-list"></div>
-      </video>
+      <picture>
+        <video poster="img/video-desktop@1x.jpg" media="(min-width: 1200px)">
+          <video poster="img/video-tablet@1x.jpg" media="(min-width: 768px)">
+            <video class="video__content" controls="controls" poster="img/video-mobile@1x.jpg">
+              <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
+              <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+              <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
+              Тег video не поддерживается вашим браузером.
+              <a href="video/duel.mp4">Скачайте видео</a>.
+            </video>
+      </picture>
+      <div class="video__bar"></div>
+      <div class="video__button-list"></div>
     </section>
   </main>
 

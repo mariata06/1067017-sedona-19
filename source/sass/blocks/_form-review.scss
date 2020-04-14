@@ -1,6 +1,14 @@
 .form-review {
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 100px 60px 100px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 120px 100px 120px;
+  }
 }
 
 .form-review__paragraph {
@@ -20,8 +28,40 @@
   }
 }
 
-.form-review__input-container {
-  display: block;
+.user-name,
+.user-surname,
+.user-middlename {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.user-phonenumber,
+.user-email {
+  @media (min-width: $desktop-width) {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form-review__contacts .form-review__paragraph {
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.user-email {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.form-review__input-phone,
+.form-review__input-email {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 315px;
+  }
 }
 
 .form-review textarea {
@@ -36,4 +76,100 @@
   line-height: 26px;
   color: $color-white;
   background-color: $color-sky;
+  width: 100%;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+}
+
+.form-review__content {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form-review__personal-data {
+  @media (min-width: $tablet-width) {
+    min-width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 480px;
+  }
+}
+
+.form-review__contacts {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.form-review__attraction {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.form-review__attraction-list {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form-review__user-review {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.form-review__user-review textarea {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.form-review__impression {
+  @media (min-width: $tablet-width) {
+    order: -1;
+    min-width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 480px;
+  }
+}
+
+.form-review__impression-list {
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.form-review__required {
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    max-width: 324px;
+  }
 }
