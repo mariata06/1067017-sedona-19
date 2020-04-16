@@ -1,3 +1,18 @@
+.review {
+  margin-top: 50px;
+  border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 110px;
+  }
+}
+
 .review__title {
   @include margintb0;
   padding-left: 20px;
@@ -9,14 +24,5 @@
 .review__description {
   line-height: 24px;
   color: $color-black;
-}
-
-.review {
-  margin-top: 50px;
-  border-bottom: 1px solid #e5e5e5;
-
-  @media (min-width: $tablet-width) {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
+  margin-top: 40px;
 }

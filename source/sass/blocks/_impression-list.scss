@@ -1,11 +1,52 @@
-.impression-list label {
-  display: block;
+.impression-list__label {
+  text-align: right;
+  padding-left: 80px;
 
   @include title($size-title, $height-title, $weight-bold, $color-black);
   text-transform: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 100px;
+    background-color: $color-light-grey-3;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
-.impression-list__input,
-.impression-list__label {
-  text-align: right;
+.impression-list__label:hover::before,
+.impression-list__label:focus::before {
+  background-color: $color-light-grey-2;
+}
+
+.impression-list__label:active::before {
+  background-color: $color-light-grey-4;
+}
+
+.impression-list__input:checked + label::before {
+  /*радио выбранный*/
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+  background-color: $color-greyblack;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  box-shadow: 0 0 0 18px $color-light-grey-3;
+}
+
+.impression-list__input:checked:hover + label::before,
+.impression-list__input:checked:focus + label::before {
+  box-shadow: 0 0 0 18px  $color-light-grey-2;
+}
+
+.impression-list__input:checked:active + label::before {
+  background-color: $color-medium-grey-4;
+  box-shadow: 0 0 0 18px  $color-light-grey-4;
 }

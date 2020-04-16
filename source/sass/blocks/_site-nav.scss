@@ -1,5 +1,6 @@
 .site-nav {
   height: 223px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     height: 56px;
@@ -9,6 +10,23 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
+  }
+}
+
+.site-nav__close {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }
 
@@ -34,11 +52,30 @@
   //color: $color-white;
   height: 55px;
   padding: 7.5px 0 7.5px 0;
+  background-color: $color-sky;
+
+  &:hover,
+  &:focus {
+    background-color: $color-sky-light-2;
+
+    @media (min-width: $tablet-width) {
+      background-color: $color-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-sky-light-3;
+
+    @media (min-width: $tablet-width) {
+      background-color: $color-white;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: inline-block;
     font-size: 14px;
     line-height: 26px;
+    background-color: $color-white;
   }
 
   &:not(:last-child) {
@@ -61,6 +98,19 @@
 .site-nav__list-link {
   color: $color-white;
   display: block;
+
+  &:hover,
+  &:focus {
+    @media (min-width: $tablet-width) {
+      color: $color-sky;
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet-width) {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
 
   @media (min-width: $tablet-width) {
     color: $color-black;

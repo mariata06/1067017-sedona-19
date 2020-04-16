@@ -1,15 +1,7 @@
 .advantages {
+  min-width: 320px;
   display: flex;
   flex-wrap: wrap;
-}
-
-.advantages__description {
-  margin-bottom: 45px;
-
-  &--sedona,
-  &--bridge {
-    color: $color-white;
-  }
 }
 
 .advantages__info {
@@ -18,6 +10,9 @@
   background-position: center top;
   background-repeat: no-repeat;
   min-height: 209px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     background-image: none;
@@ -39,7 +34,8 @@
   &--sedona,
   &--bridge {
     background-color: $color-sky;
-    max-height: 469px;
+    max-height: 489px;
+    //min-width: 320px;
 
     @media (min-width: $tablet-width) {
       display: flex;
@@ -59,10 +55,17 @@
     background-repeat: no-repeat;
     background-size: 15%;
     min-height: 139px;
+    padding: 35px 20px 0 80px;
+    text-align: left;
+    //min-width: 320px;
 
     @media (min-width: $tablet-width) {
+      background-size: 35%;
       display: inline-block;
       max-width: 256px;
+      min-height: 330px;
+      padding: 160px 37px 0 37px;
+      text-align: center;
     }
 
     @media (min-width: $desktop-width) {
@@ -74,14 +77,45 @@
 
   &--house {
     background-image: url("../img/icon-house.svg");
+    background-position: 20px 25px;
+
+    @media (min-width: $tablet-width) {
+      background-position: 90px 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 155px 60px;
+      background-size: 20%;
+    }
   }
 
   &--gift {
     background-image: url("../img/icon-gift.svg");
+    background-position: 20px 25px;
+
+    @media (min-width: $tablet-width) {
+      background-position: 90px 60px;
+      background-size: 28%;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 150px 60px;
+      background-size: 20%;
+    }
   }
 
   &--burger {
     background-image: url("../img/icon-burger.svg");
+    background-position: 20px 25px;
+
+    @media (min-width: $tablet-width) {
+      background-position: 90px 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-position: 150px 60px;
+      background-size: 20%;
+    }
   }
 
   &--area,
@@ -90,7 +124,6 @@
     background-color: $color-extralight-grey;
 
     @include global-padding;
-    @include border-bottom;
 
     padding-left: 20px;
     padding-right: 20px;
@@ -98,6 +131,7 @@
     @media (min-width: $tablet-width) {
       display: inline-block;
       max-width: 256px;
+      max-height: 256px;
     }
 
     @media (min-width: $desktop-width) {
@@ -114,21 +148,66 @@
 
   &--sedona,
   &--bridge {
-    padding-top: 45px;
+    padding-top: 70px;
+    padding-bottom: 20px;
 
     @include title($size-title, $height-title, $weight-bold, $color-white);
+
+    @media (min-width: $tablet-width) {
+      padding-top: 50px;
+    }
+  }
+
+  &--house,
+  &--burger,
+  &--gift {
+    @media (min-width: $desktop-width) {
+      font-size: 21px;
+      line-height: 26px;
+    }
   }
 
   &--area,
   &--road,
   &--crowdy {
     padding-top: 30px;
+
+    @media (min-width: $tablet-width) {
+      padding: 50px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.advantages__description {
+  margin-bottom: 25px;
+
+  &--sedona,
+  &--bridge {
+    color: $color-white;
+  }
+
+  &--area,
+  &--road,
+  &--crowdy {
+    padding-bottom: 30px;
+
+    @include border-bottom;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 22px;
+      padding-left: 40px;
+      padding-right: 40px;
+      border-bottom: none;
+      margin: 0;
+    }
   }
 }
 
 .advantages__number {
   &--sedona,
   &--bridge {
+    margin-top: 20px;
     color: $color-white;
   }
 }

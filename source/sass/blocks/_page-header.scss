@@ -2,7 +2,7 @@
   min-width: 320px;
   margin: 0 auto;
   color: $color-white;
-  background-color: $color-sky;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -35,6 +35,6 @@
   z-index: 10;
 
   @media (min-width: $tablet-width) {
-    top: 15px;
+    top: 0;
   }
 }

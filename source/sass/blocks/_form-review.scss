@@ -3,29 +3,17 @@
   padding-right: 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 100px 60px 100px 60px;
+    padding: 70px 60px 100px 60px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 100px 120px 100px 120px;
+    width: 1200px;
   }
 }
 
 .form-review__paragraph {
   @include title($size-title, $height-title, $weight-bold, $color-black);
-}
-
-.form-review label {
-  line-height: 24px;
-  color: $color-black;
-}
-
-.form-review input {
-  font-weight: 700;
-
-  &::placeholder {
-    font-weight: 700;
-  }
 }
 
 .user-name,
@@ -34,6 +22,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .user-phonenumber,
@@ -42,6 +31,7 @@
     width: 50%;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
 }
 
@@ -53,20 +43,9 @@
 
 .user-email {
   border-bottom: 1px solid #e5e5e5;
-}
-
-.form-review__input-phone,
-.form-review__input-email {
-  width: 100%;
 
   @media (min-width: $desktop-width) {
-    width: 315px;
-  }
-}
-
-.form-review textarea {
-  &::placeholder {
-    @include title($size-title, $height-title, $weight-bold, $color-black);
+    border-bottom: none;
   }
 }
 
@@ -78,6 +57,21 @@
   background-color: $color-sky;
   width: 100%;
   display: block;
+  border: none;
+  outline: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $color-sky-light-2;
+  }
+
+  &:active {
+    background-color: $color-sky-light-3;
+    color: rgba(255, 255, 255, 0.2);
+  }
 
   @media (min-width: $tablet-width) {
     width: 50%;
@@ -168,8 +162,132 @@
 }
 
 .form-review__required {
+  display: none;
+
   @media (min-width: $tablet-width) {
     display: inline-block;
     max-width: 324px;
+    margin-left: auto;
+  }
+}
+
+.form-review__input-container {
+  margin-bottom: 20px;
+  text-align: left;
+
+  &--impression,
+  &--attraction {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &--attraction {
+    @media (min-width: $tablet-width) {
+      width: 324px;
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 240px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.form-review__input {
+  font-weight: 700;
+  height: 58px;
+  background-color: $color-light-grey-3;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-light-grey-2;
+  }
+
+  &:active {
+    border: 4px solid $color-light-grey-2;
+    background-color: $color-white;
+  }
+
+  &--username {
+    width: 230px;
+
+    @media (min-width: $desktop-width) {
+      width: 350px;
+    }
+  }
+
+  &--phone {
+    position: relative;
+
+    &::after {
+      content: url("../img/icon-phone.svg");
+      //display: block;
+      //width: 58px;
+      //height: 58px;
+      //background-color: $color-light-grey-5;
+      position: absolute;
+      //top: 50%;
+      //left: 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 80px;
+    }
+  }
+
+  &--usersurname,
+  &--usermiddlename {
+    width: 192px;
+
+    @media (min-width: $desktop-width) {
+      width: 310px;
+    }
+  }
+
+  &--phone,
+  &--email {
+    width: 100%;
+    margin-top: 15px;
+
+    @media (min-width: $desktop-width) {
+      width: 315px;
+    }
+  }
+
+  &::placeholder {
+    font-weight: 700;
+  }
+}
+
+.form-review__label {
+  line-height: 24px;
+  color: $color-black;
+  padding-left: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.form-review__textarea {
+  background-color: $color-light-grey-3;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  padding-top: 20px;
+  height: 160px;
+  width: 100%;
+  margin-bottom: 51px;
+
+  &::placeholder {
+    @include title($size-title, $height-title, $weight-bold, $color-black);
   }
 }
