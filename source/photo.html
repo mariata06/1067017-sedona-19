@@ -8,9 +8,16 @@
   <meta name="format-detection" content="telephone=no">
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
+
+  <div class="page-wrapper">
 
   <header class="page-header">
     <nav class="page-header__site-nav site-nav">
@@ -58,6 +65,8 @@
       <p class="photography__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
         политике и экономике.</p>
 
+      <div class="photography__gallery">
+
       <div class="photography__item">
         <figure class="photography__content">
           <picture>
@@ -68,7 +77,17 @@
           <figcaption class="photography__caption">
             <h3 class="photography-item__photo-name">Неродные просторы</h3>
             <p class="photography-item__author">Автор фото: Борис</p>
-            <span class="photography-item__likes">1350</span>
+            <span class="photography-item__likes">
+              <svg class="photography-item__icon-like" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                <g id="Page-1">
+                  <g id="Core" transform="translate(-295.000000, -464.000000)">
+                    <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                      <path id="Shape" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              1350</span>
           </figcaption>
         </figure>
 
@@ -84,7 +103,17 @@
           <figcaption class="photography__caption">
             <h3 class="photography-item__photo-name">Местная растительность</h3>
             <p class="photography-item__author">Автор фото: Сергей</p>
-            <span class="photography-item__likes">143</span>
+            <span class="photography-item__likes">
+              <svg class="photography-item__icon-like" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                <g id="Page-1">
+                  <g id="Core" transform="translate(-295.000000, -464.000000)">
+                    <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                      <path id="Shape" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              43</span>
           </figcaption>
         </figure>
 
@@ -100,7 +129,17 @@
           <figcaption class="photography__caption">
             <h3 class="photography-item__photo-name">Дорога на север</h3>
             <p class="photography-item__author">Автор фото: Петр</p>
-            <span class="photography-item__likes">96</span>
+            <span class="photography-item__likes">
+              <svg class="photography-item__icon-like" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                <g id="Page-1">
+                  <g id="Core" transform="translate(-295.000000, -464.000000)">
+                    <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                      <path id="Shape" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              96</span>
           </figcaption>
         </figure>
       </div>
@@ -115,10 +154,22 @@
           <figcaption class="photography__caption">
             <h3 class="photography-item__photo-name">Мост дьявола</h3>
             <p class="photography-item__author">Автор фото: Антон</p>
-            <span class="photography-item__likes">254</span>
+            <span class="photography-item__likes">
+              <svg class="photography-item__icon-like" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                <g id="Page-1">
+                  <g id="Core" transform="translate(-295.000000, -464.000000)">
+                    <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                      <path id="Shape" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              254</span>
           </figcaption>
         </figure>
       </div>
+
+    </div>
 
     </section>
 
@@ -204,6 +255,7 @@
     </p>
   </footer>
 
+</div>
 </body>
 
 </html>

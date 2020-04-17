@@ -1,4 +1,10 @@
 .photography {
+  @media (min-width: $desktop-width) {
+    margin-top: 110px;
+  }
+}
+/*
+.photography {
   @media (min-width: $tablet-width) {
     padding: 75px 60px 0 60px;
     display: flex;
@@ -7,6 +13,19 @@
 
   @media (min-width: $desktop-width) {
     padding: 110px 0 0 0;
+  }
+}
+*/
+
+.photography__gallery {
+  @media (min-width: $tablet-width) {
+    padding: 75px 60px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
@@ -18,6 +37,10 @@
   @media (min-width: $tablet-width) {
     border-top: none;
     padding-top: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
   }
 
   &:last-of-type {
@@ -79,6 +102,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
+    margin-bottom: 80px;
   }
 }
 
@@ -113,13 +137,14 @@
     margin: 0 auto;
     position: absolute;
     bottom: 5px;
-    background-color: transparent;
+    background-color: rgba(00, 00, 00, 0.3);
     color: $color-white;
   }
 }
 
 .photography-item__photo-name {
-  @include margintb0;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
     width: 80%;
@@ -142,10 +167,12 @@
   }
 }
 
+
 .photography-item__likes {
   position: relative;
-  padding-left: 30px;
+  padding-left: 0;
 
+  /*
   &::before {
     content: url("../img/icon-like.svg");
     position: absolute;
@@ -153,11 +180,15 @@
     width: 22px;
     height: 20px;
 
+    @media (min-width: $tablet-width) {
+      opacity: 30%;
+    }
+
     @media (min-width: $desktop-width) {
-      fill: $color-white;
+      opacity: 100%;
     }
   }
-
+*/
   @media (min-width: $tablet-width) {
     color: $color-black;
     width: 20%;
@@ -165,5 +196,15 @@
 
   @media (min-width: $desktop-width) {
     color: $color-white;
+  }
+}
+
+.photography-item__icon-like {
+  @media (min-width: $tablet-width) {
+    fill: $color-light-grey-6;
+  }
+
+  @media (min-width: $desktop-width) {
+    fill: $color-white;
   }
 }

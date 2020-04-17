@@ -1,0 +1,38 @@
+.popup-error {
+  margin: 0 auto;
+  width: 320px;
+  padding: 45px 55px 35px 55px;
+  box-shadow: 0 5px 15px 0 rgba(00, 11, 11, 0.2);
+}
+
+.popup-error__title {
+  @include title($size-title, $height-title, $weight-bold, $color-black);
+  margin-bottom: 25px;
+}
+
+.popup-error__description {
+  line-height: 24px;
+  color: $color-black;
+  margin-bottom: 30px;
+}
+
+.popup-error__button {
+  font-size: 18px;
+  font-weight: $weight-bold;
+  line-height: 26px;
+  color: $color-white;
+  background-color: $color-sky;
+  border: none;
+  padding: 21px 75px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $color-sky-light-2;
+  }
+
+  &:active {
+    background-color: $color-sky-light-3;
+    color: rgba(255, 255, 255, 0.2);
+  }
+}

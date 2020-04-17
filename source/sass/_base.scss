@@ -31,30 +31,22 @@ body {
   text-align: center;
 
   color: $color-greyblack;
+  //background-color: $color-light-grey-3;
 }
 
-.page-main {
-  min-width: 320px;
+.page-wrapper {
+  width: 320px;
   margin: 0 auto;
-  //background-color: $color-blue-black;
+  box-shadow: 0 5px 15px 0 rgba(00, 11, 11, 0.2);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 768px;
-    //padding: 0 40px;
-    margin: 0 auto;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop-width) {
     width: 1200px;
-    //padding: 0 40px;
-    margin: 0 auto;
-  }
-
-  &--form {
-    margin: 0 auto;
   }
 }
-
 
 img {
   max-width: 100%;

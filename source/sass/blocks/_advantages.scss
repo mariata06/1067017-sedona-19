@@ -2,6 +2,15 @@
   min-width: 320px;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
 }
 
 .advantages__info {
@@ -33,18 +42,18 @@
 .advantages__item {
   &--sedona,
   &--bridge {
-    background-color: $color-sky;
-    max-height: 489px;
+    //background-color: $color-sky;
+    min-height: 489px;
     //min-width: 320px;
 
     @media (min-width: $tablet-width) {
       display: flex;
-      max-height: 256px;
+      min-height: 256px;
     }
 
     @media (min-width: $desktop-width) {
       display: flex;
-      max-height: 256px;
+      min-height: 256px;
     }
   }
 
@@ -89,6 +98,20 @@
     }
   }
 
+  /*
+  &--house {
+    position: relative;
+
+    &::after {
+      content: url("../img/icon-house.svg");
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+  }
+*/
   &--gift {
     background-image: url("../img/icon-gift.svg");
     background-position: 20px 25px;
@@ -131,7 +154,7 @@
     @media (min-width: $tablet-width) {
       display: inline-block;
       max-width: 256px;
-      max-height: 256px;
+      min-height: 256px;
     }
 
     @media (min-width: $desktop-width) {
@@ -143,7 +166,9 @@
 }
 
 .advantages__title {
-  @include margintb0;
+  margin-top: 0;
+  margin-bottom: 0;
+
   @include title($size-title, $height-title, $weight-bold, $color-black);
 
   &--sedona,

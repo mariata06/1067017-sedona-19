@@ -14,7 +14,8 @@
 }
 
 .review__title {
-  @include margintb0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 20px;
   padding-right: 20px;
 

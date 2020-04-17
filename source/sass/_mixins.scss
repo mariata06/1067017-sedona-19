@@ -1,13 +1,3 @@
-@mixin margintb0 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-@mixin liststyle {
-  list-style: none;
-  padding-left: 0;
-}
-
 @mixin side-shadow {
   box-shadow: 0 5px 15px 0 rgba(00, 11, 11, 0.2);
 }
