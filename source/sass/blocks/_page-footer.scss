@@ -2,6 +2,7 @@
   background-color: $color-white;
   min-width: 320px;
   margin: 0 auto;
+  padding-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -13,23 +14,56 @@
 
   @media (min-width: $desktop-width) {
     width: 1200px;
-    padding: 0 40px;
+    padding: 0 120px;
   }
 }
 
 .page-footer__social-list {
-  @include liststyle;
+  list-style: none;
+  padding-left: 0;
 }
 
 .page-footer__hashtag {
-  @include margintb0;
   font-size: 21px;
   font-weight: $weight-bold;
   line-height: 26px;
   color: $color-black;
+  margin-top: 35px;
+  margin-bottom: 36px;
 }
 
 .page-footer__copyright {
   line-height: 26px;
   color: $color-black;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
+
+.page-footer__copyright span {
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+.page-footer__copyright-logo {
+  &:hover,
+  &:focus {
+    fill: $color-sky;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+}
+
+/*
+.page-footer__copyright-svg {
+  padding-left: 10px;
+}
+*/

@@ -1,22 +1,39 @@
+.review {
+  margin-top: 40px;
+  border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 140px;
+    padding-right: 140px;
+    border-bottom: none;
+    margin-top: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 110px;
+  }
+}
+
 .review__title {
-  @include margintb0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 20px;
   padding-right: 20px;
 
   @include title($size-title, $height-title, $weight-bold, $color-black);
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .review__description {
   line-height: 24px;
   color: $color-black;
-}
+  margin-top: 30px;
 
-.review {
-  margin-top: 50px;
-  border-bottom: 1px solid #e5e5e5;
-
-  @media (min-width: $tablet-width) {
-    padding-left: 60px;
-    padding-right: 60px;
+  @media (min-width: $desktop-width) {
+    padding-left: 240px;
+    padding-right: 240px;
   }
 }

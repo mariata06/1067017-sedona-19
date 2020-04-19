@@ -1,0 +1,19 @@
+.burger-menu {
+  //width: 23px;
+  //height: 21px;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  z-index: 10;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+}

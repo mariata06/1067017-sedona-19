@@ -7,16 +7,26 @@
   font-weight: $weight-bold;
   line-height: 26px;
   color: $color-black;
+  margin-top: 27px;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    margin-top: 55px;
+    margin-bottom: 25px;
+  }
 }
 
 .booking__description {
-  padding-left: 13px;
-  padding-right: 13px;
-}
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 24px;
+  margin-bottom: 32px;
 
-.booking__map iframe {
-  width: 100%;
-  border: none;
+  @media (min-width: $tablet-width) {
+    padding-left: 165px;
+    padding-right: 165px;
+  }
 }
 
 .booking__button {
@@ -26,9 +36,51 @@
   color: $color-white;
   background-color: $color-sky;
   display: block;
-  margin: 0 auto;
+  margin: 0 20px;
+  padding: 17px 0;
+  margin-bottom: 49px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-sky-light-2;
+  }
+
+  &:active {
+    background-color: $color-sky-light-3;
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:disabled {
+    background-color: $color-light-grey-2;
+  }
 
   @media (min-width: $tablet-width) {
     max-width: 458px;
+    margin: 50px auto 58px;
   }
+}
+
+.booking__map {
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  //max-height: 351px;
+  height: 351px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    height: 351px;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    height: 351px;
+  }
+}
+
+.booking__iframe {
+  border: none;
+  height: 100%;
+  width: 100%;
 }

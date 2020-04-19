@@ -1,30 +1,60 @@
 .form-review {
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 60px;
 
   @media (min-width: $tablet-width) {
-    padding: 100px 60px 100px 60px;
+    padding: 65px 60px 100px 60px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 100px 120px 100px 120px;
+    padding: 50px 120px 0 120px;
+    width: 1200px;
   }
 }
 
 .form-review__paragraph {
   @include title($size-title, $height-title, $weight-bold, $color-black);
-}
+  margin-top: 0;
+  margin-bottom: 20px;
 
-.form-review label {
-  line-height: 24px;
-  color: $color-black;
-}
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    text-align: left;
+    margin-bottom: 45px;
+  }
 
-.form-review input {
-  font-weight: 700;
+  &--contacts,
+  &--attraction,
+  &--user-review {
+    @media (min-width: $tablet-width) {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-left: 150px;
+      padding-right: 150px;
+    }
 
-  &::placeholder {
-    font-weight: 700;
+    @media (min-width: $desktop-width) {
+      margin-bottom: 65px;
+    }
+  }
+
+  &--attraction {
+    @media (min-width: $desktop-width) {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-left: 280px;
+      padding-right: 280px;
+    }
+  }
+
+  &--impression {
+    @media (min-width: $desktop-width) {
+      text-align: center;
+      //margin-bottom: 20px;
+      //padding-left: 150px;
+      //padding-right: 150px;
+    }
   }
 }
 
@@ -34,6 +64,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .user-phonenumber,
@@ -42,31 +73,14 @@
     width: 50%;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    padding-right: 50px;
   }
 }
 
 .form-review__contacts .form-review__paragraph {
   @media (min-width: $desktop-width) {
     width: 100%;
-  }
-}
-
-.user-email {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.form-review__input-phone,
-.form-review__input-email {
-  width: 100%;
-
-  @media (min-width: $desktop-width) {
-    width: 315px;
-  }
-}
-
-.form-review textarea {
-  &::placeholder {
-    @include title($size-title, $height-title, $weight-bold, $color-black);
   }
 }
 
@@ -78,6 +92,21 @@
   background-color: $color-sky;
   width: 100%;
   display: block;
+  border: none;
+  outline: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $color-sky-light-2;
+  }
+
+  &:active {
+    background-color: $color-sky-light-3;
+    color: rgba(255, 255, 255, 0.2);
+  }
 
   @media (min-width: $tablet-width) {
     width: 50%;
@@ -92,8 +121,13 @@
 }
 
 .form-review__personal-data {
+  margin-top: 15px;
+  margin-bottom: 20px;
+
   @media (min-width: $tablet-width) {
     min-width: 324px;
+    margin-top: 0;
+    padding-left: 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -102,6 +136,9 @@
 }
 
 .form-review__contacts {
+  margin-top: 45px;
+  margin-bottom: 0;
+
   @media (min-width: $tablet-width) {
     width: 100%;
   }
@@ -115,6 +152,8 @@
 }
 
 .form-review__attraction {
+  margin-top: 45px;
+
   @media (min-width: $tablet-width) {
     width: 100%;
   }
@@ -139,21 +178,20 @@
 }
 
 .form-review__user-review {
-  @media (min-width: $tablet-width) {
-    width: 100%;
-  }
-}
+  margin-top: 40px;
 
-.form-review__user-review textarea {
   @media (min-width: $tablet-width) {
     width: 100%;
   }
 }
 
 .form-review__impression {
+  margin-top: 45px;
+
   @media (min-width: $tablet-width) {
     order: -1;
     min-width: 324px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -168,8 +206,253 @@
 }
 
 .form-review__required {
+  display: none;
+
   @media (min-width: $tablet-width) {
     display: inline-block;
     max-width: 324px;
+    margin-left: auto;
+  }
+}
+
+.form-review__input-container {
+  margin-bottom: 20px;
+  text-align: left;
+
+  &--impression,
+  &--attraction {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &--attraction {
+    margin-bottom: 23px;
+
+    @media (min-width: $tablet-width) {
+      width: 324px;
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 240px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.user-phonenumber {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.user-email {
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  margin-bottom: 5px;
+
+  @media (min-width: $desktop-width) {
+    border-bottom: none;
+    padding-right: 0;
+  }
+}
+
+.form-review__input {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  height: 58px;
+  background-color: $color-light-grey-3;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-light-grey-2;
+  }
+
+  &:active {
+    border: 4px solid $color-light-grey-2;
+    background-color: $color-white;
+    padding-left: 16px;
+  }
+
+  &--username {
+    width: 230px;
+
+    @media (min-width: $desktop-width) {
+      width: 350px;
+    }
+  }
+
+  /*
+  &--phone {
+    //position: relative;
+
+
+    &::after {
+      content: "";
+      background: url("../img/icon-phone.svg") no-repeat;
+      width: 58px;
+      height: 58px;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-size: cover;
+      //display: block;
+      //width: 58px;
+      //height: 58px;
+      //background-color: $color-light-grey-5;
+      //top: 50%;
+      //left: 50%;
+    }
+
+    @media (min-width: $tablet-width) {
+      //margin-right: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+      //margin-right: 80px;
+    }
+    */
+
+  &--usersurname,
+  &--usermiddlename {
+    width: 192px;
+
+    @media (min-width: $desktop-width) {
+      width: 310px;
+    }
+  }
+
+  &--phone,
+  &--email {
+    width: 100%;
+    margin-top: 15px;
+
+    @media (min-width: $desktop-width) {
+      width: 315px;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-left: 50px;
+    }
+  }
+
+  &::placeholder {
+    font-weight: 700;
+  }
+}
+
+.form-review__label {
+  line-height: 24px;
+  color: $color-black;
+  padding-left: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.form-review__textarea {
+  background-color: $color-light-grey-3;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 20px;
+  height: 160px;
+  width: 100%;
+  margin-bottom: 51px;
+
+  &::placeholder {
+    @include title($size-title, $height-title, $weight-bold, $color-black);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.user-phonenumber::after {
+  content: "";
+  width: 58px;
+  height: 58px;
+  background-color: $color-light-grey-5;
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    top: 40px;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 15px;
+    bottom: 0;
+    right: 50px;
+  }
+}
+
+.user-email::after {
+  content: "";
+  width: 58px;
+  height: 58px;
+  background-color: $color-light-grey-5;
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    top: 40px;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 15px;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.user-phonenumber::before {
+  content: url("../img/icon-phone.svg");
+  position: absolute;
+  z-index: 10;
+  top: 60px;
+  bottom: 0;
+  right: 20px;
+
+  @media (min-width: $desktop-width) {
+    top: 30px;
+    bottom: 0;
+    right: 70px;
+  }
+}
+
+.user-email::before {
+  content: url("../img/icon-mail.svg");
+  position: absolute;
+  z-index: 10;
+  top: 60px;
+  bottom: 0;
+  right: 20px;
+
+  @media (min-width: $desktop-width) {
+    top: 30px;
+    bottom: 0;
+    right: 20px;
   }
 }
