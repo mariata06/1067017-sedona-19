@@ -7,15 +7,21 @@
   font-weight: $weight-bold;
   line-height: 26px;
   color: $color-black;
+  margin-top: 27px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
+    font-size: 30px;
     margin-top: 55px;
+    margin-bottom: 25px;
   }
 }
 
 .booking__description {
   padding-left: 20px;
   padding-right: 20px;
+  line-height: 24px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     padding-left: 165px;
@@ -31,7 +37,7 @@
   background-color: $color-sky;
   display: block;
   margin: 0 20px;
-  padding: 20px 0;
+  padding: 17px 0;
   margin-bottom: 49px;
 
   &:hover,

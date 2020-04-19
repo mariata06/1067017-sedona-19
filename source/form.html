@@ -37,6 +37,7 @@
       <a href="index.html">
         <picture>
           <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+            <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
           <img src="img/logo-sedona-mobile.svg" alt="Лого Седона" class="page-header__logo">
         </picture>
       </a>
@@ -67,7 +68,7 @@
         <form action="https://echo.htmlacademy.ru" method="post">
           <div class="form-review__content">
             <div class="form-review__personal-data">
-              <p class="form-review__paragraph">Представьтесь:</p>
+              <p class="form-review__paragraph form-review__paragraph--personal-data">Представьтесь:</p>
               <div class="form-review__input-container user-name">
                 <label>Имя*:</label>
                 <input class="form-review__input form-review__input--username" type="text" name="user-name" value="Петр"
@@ -86,12 +87,12 @@
             </div>
 
             <div class="form-review__contacts">
-              <p class="form-review__paragraph">Контакная информация:</p>
+              <p class="form-review__paragraph form-review__paragraph--contacts">Контакная информация:</p>
               <div class="form-review__input-container user-phonenumber">
                 <label class="form-review__label">Телефон*:</label>
                 <input type="tel" class="form-review__input form-review__input--phone" name="user-phonenumber"
                   value="Введите телефон" required>
-                  <button class="form-review__button-phone">
+                  <!--<button class="form-review__button-phone">
                     <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve">
                       <g id="Page-1">
                         <g id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
@@ -101,7 +102,7 @@
                         </g>
                       </g>
                     </svg>
-                  </button>
+                  </button>-->
               </div>
 
               <div class="form-review__input-container user-email">
@@ -112,7 +113,7 @@
             </div>
 
             <div class="form-review__impression">
-              <p class="form-review__paragraph">Вaше общее впечатление:</p>
+              <p class="form-review__paragraph form-review__paragraph--impression">Вaше общее впечатление:</p>
               <div class="form-review__impression-list impression-list">
 
                 <div class="form-review__input-container form-review__input-container--impression">
@@ -137,7 +138,7 @@
             </div>
 
             <div class="form-review__attraction">
-              <p class="form-review__paragraph">Посещенные достопримечательности:</p>
+              <p class="form-review__paragraph form-review__paragraph--attraction">Посещенные достопримечательности:</p>
               <div class="form-review__attraction-list attraction-list">
 
                 <div class="form-review__input-container form-review__input-container--attraction">
@@ -167,7 +168,7 @@
             </div>
 
             <div class="form-review__user-review">
-              <p class="form-review__paragraph">Опишите свои эмоции:</p>
+              <p class="form-review__paragraph form-review__paragraph--user-review">Опишите свои эмоции:</p>
               <textarea class="form-review__textarea" placeholder="Опишите подробно все свои восторги"
                 name="usermessage"></textarea>
             </div>
@@ -200,7 +201,8 @@
           </a>
         </li>
       </ul>
-      <p class="page-footer__copyright">Разработано
+      <p class="page-footer__copyright">
+        <span>Разработано</span>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-logo">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09"

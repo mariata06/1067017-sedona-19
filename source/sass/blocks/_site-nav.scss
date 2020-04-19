@@ -45,7 +45,7 @@
     //display: flex;
     //justify-content: space-between;
     //background-color: $color-white;
-    padding-top: 18px;
+    padding-top: 15px;
     //padding-bottom: 18px;
     display: flex;
     flex-wrap: wrap;
@@ -141,11 +141,12 @@
   }
 }
 
-.site-nav__list li:nth-child(4n+1) {
+.site-nav__list-item:nth-child(4n+1) {
   @media (min-width: $tablet-width) {
     text-align: left;
     width: 130px;
-    padding-bottom: 18px;
+    padding-right: 20px;
+    padding-bottom: 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -153,11 +154,12 @@
   }
 }
 
-.site-nav__list li:nth-child(4n+2) {
+.site-nav__list-item:nth-child(4n+2) {
   @media (min-width: $tablet-width) {
     text-align: left;
-    width: 202px;
-    padding-bottom: 18px;
+    width: 200px;
+    padding-right: 20px;
+    padding-bottom: 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -165,11 +167,12 @@
   }
 }
 
-.site-nav__list li:nth-child(4n+3) {
+.site-nav__list-item:nth-child(4n+3) {
   @media (min-width: $tablet-width) {
     text-align: right;
     width: 210px;
-    padding-bottom: 18px;
+    padding-left: 20px;
+    padding-bottom: 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -177,11 +180,12 @@
   }
 }
 
-.site-nav_list li:nth-child(4n+4) {
+.site-nav__list-item:nth-child(4n+4) {
   @media (min-width: $tablet-width) {
     text-align: right;
     width: 151px;
-    padding-bottom: 18px;
+    padding-bottom: 15px;
+    padding-left: 20px;
   }
 
   @media (min-width: $desktop-width) {

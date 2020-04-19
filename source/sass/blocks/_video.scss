@@ -1,9 +1,9 @@
 .video {
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 45px;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 60px 0 60px;
+    padding: 30px 60px 50px 60px;
     max-width: 768px;
     height: auto;
     max-height: 100%;
@@ -12,13 +12,20 @@
   @media (min-width: $desktop-width) {
     max-width: 800px;
     margin: 0 auto;
-    padding: 70px 0 0 0;
+    padding: 70px 0 60px 0;
   }
 }
 
 .video__title {
   color: $color-black;
-  margin-top: 40px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 
   @media (min-width: $desktop-width) {
     margin: 0;
@@ -26,55 +33,140 @@
 }
 
 .video__description {
-  margin-top: 40px;
+  margin-top: 25px;
   margin-bottom: 40px;
   padding: 0 40px;
-}
-
-.video__indicator {
-  width: 280px;
-  height: 111px;
-  display: block;
-  position: absolute;
-  bottom: 25px;
-  left: 20px;
 
   @media (min-width: $tablet-width) {
-    width: 90%;
-    left: 60px;
+    line-height: 24px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 190px;
+    padding-right: 190px;
+    margin-top: 35px;
+    margin-bottom: 70px;
   }
 }
 
+.video__player {
+  width: 280px;
+  height: 66px;
+  //display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -5px;
+  background-color: $color-light-grey-3;
+  display: flex;
+  align-items: center;
+  //justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+    height: 93px;
+    margin-top: -100px;
+    background-color: rgba(00, 00, 00, 0.6);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+  }
+}
+
+.video__player::before {
+  content: "";
+  width: 280px;
+  height: 45px;
+  display: block;
+  background-color: rgba(00, 00, 00, 0.6);
+  position: absolute;
+  bottom: 65px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.video__button {
+  //position: absolute;
+  //top: 50px;
+  border: none;
+  background-color: $color-light-grey-3;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+  }
+
+  &--fullscreen {
+    margin-left: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 50px;
+    }
+  }
+
+  &--subtitles {
+    margin-left: 150px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 450px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 620px;
+    }
+  }
+
+  &--replay {
+    margin-left: 20px;
+  }
+}
+
+
+/*
 .video__input-type-range {
   width: 100%;
   height: 45px;
   background-color: rgba(00, 00, 00, 0.6);
   position: relative;
 }
-
+*/
 .video__volume-scale {
   width: 235px;
   height: 3px;
   background-color: $color-medium-grey-2;
   position: absolute;
-  top: 22px;
+  bottom: 85px;
   left: 22px;
-}
 
-.video__volume-button {
-  &::after {
-    content: "";
-    display: block;
-    width: 9px;
-    height: 9px;
-    border-radius: 10px;
-    background-color: $color-white;
-    position: absolute;
-    top: 18px;
-    left: 58px;
+  @media (min-width: $tablet-width) {
+    width: 390px;
+    bottom: 45px;
+    left: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 540px;
+    //bottom: 45px;
+    //left: 52px;
   }
 }
 
+.video__volume-button {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 10px;
+  background-color: $color-white;
+  position: absolute;
+  bottom: 42px;
+  left: 135px;
+}
+
+/*
 .video__button-list {
   width: 100%;
   height: 66px;
@@ -84,19 +176,37 @@
   justify-content: space-between;
   padding: 25px;
 }
+*/
 
 .video__icon {
   cursor: pointer;
 
+  @media (min-width: $tablet-width) {
+    fill: $color-white;
+  }
+
   &:hover {
     fill: $color-greyblack;
+
+    @media (min-width: $tablet-width) {
+      fill: $color-white;
+      opacity: 60%;
+    }
   }
 
   &:active {
     fill: $color-medium-grey-3;
+
+    @media (min-width: $tablet-width) {
+      fill: $color-white;
+      opacity: 30%;
+    }
   }
 
+  /*
   &--subtitles {
     margin-left: 133px;
   }
+  */
 }
+
