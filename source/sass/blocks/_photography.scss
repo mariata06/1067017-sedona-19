@@ -1,10 +1,10 @@
 .photography {
   @media (min-width: $tablet-width) {
-    padding-top: 75px;
+    padding-top: 50px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 110px;
+    margin-top: 50px;
     padding-top: 0;
   }
 }
@@ -24,7 +24,7 @@
 
 .photography__gallery {
   @media (min-width: $tablet-width) {
-    padding: 75px 60px 0 60px;
+    padding: 70px 60px 0 60px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -36,12 +36,13 @@
 
 .photography__item {
   border-top: 1px solid $color-light-grey-2;
-  padding-top: 20px;
+  padding-top: 23px;
   margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     border-top: none;
     padding-top: 0;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -50,7 +51,7 @@
 
   &:last-of-type {
     border-bottom: 1px solid $color-light-grey-2;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 
     @media (min-width: $tablet-width) {
       border-bottom: none;
@@ -76,7 +77,7 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    height: 347px;
+    //height: 347px;
   }
 
   @media (min-width: $desktop-width) {
@@ -86,7 +87,7 @@
 
   &--front {
     @media (min-width: $tablet-width) {
-      height: 480px;
+      //height: 480px;
     }
 
     @media (min-width: $desktop-width) {
@@ -97,12 +98,12 @@
 
 .photography__title {
   @include title($size-title, $height-title, $weight-bold, $color-black);
-  margin-top: 40px;
-  margin-bottom: 26px;
+  margin-top: 36px;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
     font-size: 30px;
     line-height: 26px;
   }
@@ -115,7 +116,8 @@
 .photography__description {
   padding-left: 24px;
   padding-right: 24px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+  line-height: 24px;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
@@ -149,14 +151,15 @@
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
+    position: relative;
     color: $color-black;
     background-color: $color-light-grey-3;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    //flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 80px;
+    //height: 80px;
   }
 
   @media (min-width: $desktop-width) {
@@ -169,19 +172,22 @@
 }
 
 .photography-item__photo-name {
-  margin-top: 12px;
+  margin-top: 10px;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
-    width: 80%;
-    margin-top: 0;
+    //width: 80%;
+    margin-top: 15px;
     //height: 50%;
+    margin-right: auto;
   }
 
   @media (min-width: $desktop-width) {
-    height: 30%;
+    //height: 30%;
+    height: 50%;
+    width: 80%;
   }
 }
 
@@ -193,62 +199,57 @@
 
   @media (min-width: $tablet-width) {
     color: $color-black;
-    margin: 0;
-    height: 50%;
+    //margin: 0;
+    //height: 50%;
     width: 80%;
+    margin-right: auto;
+    margin-bottom: 16px;
   }
 
   @media (min-width: $desktop-width) {
     color: $color-white;
-    height: 30%;
+    //height: 30%;
+    height: 50%;
   }
 }
 
 
 .photography-item__likes {
-  position: relative;
-  padding-left: 0;
-
-  /*
-  &::before {
-    content: url("../img/icon-like.svg");
-    position: absolute;
-    left: 0;
-    width: 22px;
-    height: 20px;
-
-    @media (min-width: $tablet-width) {
-      opacity: 30%;
-    }
-
-    @media (min-width: $desktop-width) {
-      opacity: 100%;
-    }
-  }
-*/
   @media (min-width: $tablet-width) {
     color: $color-black;
-    width: 20%;
+    //margin-right: 10px;
+    //margin-left: -10px;
+    position: absolute;
+    top: 27px;
+    right: 36px;
   }
 
   @media (min-width: $desktop-width) {
     color: $color-white;
     height: 50%;
-    //padding-left: 80px;
-    //width: 10%;
-    margin-left: auto;
+    //margin-left: auto;
+    right: 30px;
   }
 
   &--front {
+    @media (min-width: $tablet-width) {
+      right: 20px;
+    }
+
     @media (min-width: $desktop-width) {
-      width: 10%;
+      //width: 10%;
+      top: 26px;
+      right: 22px;
     }
   }
 }
 
 .photography-item__icon-like {
+  margin-right: 10px;
+
   @media (min-width: $tablet-width) {
     fill: $color-light-grey-6;
+    margin-right: 5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -259,6 +260,7 @@
 .photography-item__picture {
   @media (min-width: $tablet-width) {
     height: 267px;
+    display: block;
   }
 
   &--front {

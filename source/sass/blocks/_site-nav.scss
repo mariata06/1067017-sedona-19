@@ -17,7 +17,7 @@
 .site-nav__close {
   position: absolute;
   top: 17px;
-  right: 20px;
+  right: 14px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -160,6 +160,7 @@
     width: 200px;
     padding-right: 20px;
     padding-bottom: 15px;
+    padding-left: 3px;
   }
 
   @media (min-width: $desktop-width) {
@@ -170,8 +171,8 @@
 .site-nav__list-item:nth-child(4n+3) {
   @media (min-width: $tablet-width) {
     text-align: right;
-    width: 210px;
-    padding-left: 20px;
+    width: 213px;
+    padding-left: 17px;
     padding-bottom: 15px;
   }
 
@@ -183,7 +184,7 @@
 .site-nav__list-item:nth-child(4n+4) {
   @media (min-width: $tablet-width) {
     text-align: right;
-    width: 151px;
+    width: 148px;
     padding-bottom: 15px;
     padding-left: 20px;
   }

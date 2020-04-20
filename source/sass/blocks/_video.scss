@@ -1,9 +1,9 @@
 .video {
   position: relative;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 60px 50px 60px;
+    padding: 36px 60px 43px 60px;
     max-width: 768px;
     height: auto;
     max-height: 100%;
@@ -12,13 +12,13 @@
   @media (min-width: $desktop-width) {
     max-width: 800px;
     margin: 0 auto;
-    padding: 70px 0 60px 0;
+    padding: 70px 0 85px 0;
   }
 }
 
 .video__title {
   color: $color-black;
-  margin-top: 35px;
+  margin-top: 32px;
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 26px;
@@ -33,20 +33,23 @@
 }
 
 .video__description {
-  margin-top: 25px;
-  margin-bottom: 40px;
+  margin-top: 28px;
+  margin-bottom: 34px;
   padding: 0 40px;
+  line-height: 24px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 30px;
+    margin-bottom: 74px;
     line-height: 24px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding-left: 190px;
     padding-right: 190px;
-    margin-top: 35px;
+    margin-top: 31px;
     margin-bottom: 70px;
   }
 }
@@ -66,7 +69,7 @@
   @media (min-width: $tablet-width) {
     width: 648px;
     height: 93px;
-    margin-top: -100px;
+    margin-top: -99px;
     background-color: rgba(00, 00, 00, 0.6);
   }
 
@@ -101,27 +104,35 @@
   }
 
   &--fullscreen {
-    margin-left: 20px;
+    margin-left: 30px;
 
     @media (min-width: $tablet-width) {
-      margin-left: 50px;
+      margin-left: 30px;
     }
   }
 
   &--subtitles {
-    margin-left: 150px;
+    margin-left: 135px;
 
     @media (min-width: $tablet-width) {
-      margin-left: 450px;
+      margin-left: 474px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-left: 620px;
+      margin-left: 623px;
     }
   }
 
   &--replay {
-    margin-left: 20px;
+    margin-left: 23px;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      //margin-left: 620px;
+    }
   }
 }
 
@@ -145,7 +156,7 @@
   @media (min-width: $tablet-width) {
     width: 390px;
     bottom: 45px;
-    left: 52px;
+    left: 92px;
   }
 
   @media (min-width: $desktop-width) {
@@ -162,8 +173,13 @@
   border-radius: 10px;
   background-color: $color-white;
   position: absolute;
-  bottom: 42px;
-  left: 135px;
+  bottom: 82px;
+  left: 55px;
+
+  @media (min-width: $tablet-width) {
+    bottom: 42px;
+    left: 208px;
+  }
 }
 
 /*

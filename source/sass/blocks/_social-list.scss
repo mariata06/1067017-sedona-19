@@ -6,6 +6,16 @@
   margin: 0 auto;
   list-style: none;
   padding-left: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 113px;
+    //margin-bottom: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-right: 2px;
+  }
 }
 
 .social-list__item-icon {

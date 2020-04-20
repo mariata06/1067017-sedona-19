@@ -1,11 +1,11 @@
 .intro {
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
-  background-position: center 333px, center -105px;
+  background-position: center 333px, center -110px;
   background-repeat: no-repeat, no-repeat;
   //width: 320px;
   //top center;
-  margin: 0 auto;
-  width: 100%;
+  //margin: 0 auto;
+  //width: 100%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
@@ -39,7 +39,8 @@
   &--photo,
   &--form {
     background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
-    background-position: center 103px, -225px -230px;
+    background-position: center 103px, -465px -520px;
+    //background-size: 50%, 50%;
     background-repeat: no-repeat, no-repeat;
     //height: 158px;
 
@@ -49,7 +50,7 @@
 
     @media (min-width: $tablet-width) {
       background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-tablet@1x.jpg");
-      background-position: center 235px, 0 -220px;
+      background-position: center 235px, 0 -228px;
       background-repeat: no-repeat, no-repeat;
       //height: 290px;
 
@@ -60,7 +61,7 @@
 
     @media (min-width: $desktop-width) {
       background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
-      background-position: center 241px, 0 -220px;
+      background-position: center 244px, 0 -218px;
       background-repeat: no-repeat, no-repeat;
       //height: 313px;
 
@@ -89,11 +90,13 @@
     text-align: center;
     width: 230px;
     height: 40px;
+    margin-bottom: 64px;
 
     @media (min-width: $tablet-width) {
       margin-top: 80px;
       width: 458px;
       height: 110px;
+      margin-bottom: 120px;
     }
 
     @media (min-width: $desktop-width) {
@@ -119,7 +122,7 @@
   @include title($size-title, $height-title, $weight-bold, $color-black);
   //margin-top: 60px;
   //margin-top: 5px;
-  padding-top: 60px;
+  padding-top: 41px;
   margin-bottom: 30px;
   padding-left: 5px;
   padding-right: 5px;

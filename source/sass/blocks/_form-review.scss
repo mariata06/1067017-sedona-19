@@ -1,7 +1,7 @@
 .form-review {
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 
   @media (min-width: $tablet-width) {
     padding: 65px 60px 100px 60px;
@@ -16,13 +16,20 @@
 .form-review__paragraph {
   @include title($size-title, $height-title, $weight-bold, $color-black);
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  letter-spacing: 0.675px;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
     text-align: left;
     margin-bottom: 45px;
   }
+
+
+  &--user-review {
+    margin-bottom: 15px;
+  }
+
 
   &--contacts,
   &--attraction,
@@ -40,6 +47,8 @@
   }
 
   &--attraction {
+    margin-bottom: 17px;
+
     @media (min-width: $desktop-width) {
       text-align: center;
       margin-bottom: 20px;
@@ -94,9 +103,10 @@
   display: block;
   border: none;
   outline: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   text-transform: uppercase;
+  letter-spacing: 0.05px;
 
   &:hover,
   &:focus {
@@ -121,8 +131,8 @@
 }
 
 .form-review__personal-data {
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 18px;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
     min-width: 324px;
@@ -136,7 +146,7 @@
 }
 
 .form-review__contacts {
-  margin-top: 45px;
+  margin-top: 43px;
   margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
@@ -178,7 +188,7 @@
 }
 
 .form-review__user-review {
-  margin-top: 40px;
+  margin-top: 45px;
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -186,7 +196,7 @@
 }
 
 .form-review__impression {
-  margin-top: 45px;
+  margin-top: 49px;
 
   @media (min-width: $tablet-width) {
     order: -1;
@@ -230,7 +240,7 @@
   }
 
   &--attraction {
-    margin-bottom: 23px;
+    margin-bottom: 24px;
 
     @media (min-width: $tablet-width) {
       width: 324px;
@@ -246,7 +256,7 @@
 
 .user-phonenumber {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
 .user-email {
@@ -289,41 +299,9 @@
     }
   }
 
-  /*
-  &--phone {
-    //position: relative;
-
-
-    &::after {
-      content: "";
-      background: url("../img/icon-phone.svg") no-repeat;
-      width: 58px;
-      height: 58px;
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      background-size: cover;
-      //display: block;
-      //width: 58px;
-      //height: 58px;
-      //background-color: $color-light-grey-5;
-      //top: 50%;
-      //left: 50%;
-    }
-
-    @media (min-width: $tablet-width) {
-      //margin-right: 80px;
-    }
-
-    @media (min-width: $desktop-width) {
-      //margin-right: 80px;
-    }
-    */
-
   &--usersurname,
   &--usermiddlename {
+    letter-spacing: 0.2px;
     width: 192px;
 
     @media (min-width: $desktop-width) {
@@ -334,7 +312,8 @@
   &--phone,
   &--email {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 5px;
+    letter-spacing: 0.2px;
 
     @media (min-width: $desktop-width) {
       width: 315px;
@@ -368,7 +347,7 @@
   padding-top: 20px;
   height: 160px;
   width: 100%;
-  margin-bottom: 51px;
+  margin-bottom: 48px;
 
   &::placeholder {
     @include title($size-title, $height-title, $weight-bold, $color-black);
@@ -386,7 +365,7 @@
   background-color: $color-light-grey-5;
   position: absolute;
   z-index: 1;
-  top: 40px;
+  top: 29px;
   bottom: 0;
   right: 0;
 
@@ -410,7 +389,7 @@
   background-color: $color-light-grey-5;
   position: absolute;
   z-index: 1;
-  top: 40px;
+  top: 29px;
   bottom: 0;
   right: 0;
 
@@ -431,7 +410,7 @@
   content: url("../img/icon-phone.svg");
   position: absolute;
   z-index: 10;
-  top: 60px;
+  top: 47px;
   bottom: 0;
   right: 20px;
 
@@ -446,7 +425,7 @@
   content: url("../img/icon-mail.svg");
   position: absolute;
   z-index: 10;
-  top: 60px;
+  top: 55px;
   bottom: 0;
   right: 20px;
 
