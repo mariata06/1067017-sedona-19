@@ -6,11 +6,12 @@
     padding-left: 140px;
     padding-right: 140px;
     border-bottom: none;
-    margin-top: 75px;
+    margin-top: 49px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 110px;
+    margin-top: 50px;
+    //margin-top: 110px;
   }
 }
 
@@ -31,6 +32,10 @@
   line-height: 24px;
   color: $color-black;
   margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.005px;
+  }
 
   @media (min-width: $desktop-width) {
     padding-left: 240px;

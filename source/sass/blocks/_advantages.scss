@@ -11,6 +11,13 @@
   @media (min-width: $desktop-width) {
     width: 1200px;
   }
+
+  &--sedona,
+  &--bridge {
+    @media (min-width: $desktop-width) {
+      overflow: hidden;
+    }
+  }
 }
 
 .advantages__info {
@@ -389,5 +396,14 @@
   &--bridge {
     margin-top: 20px;
     color: $color-white;
+  }
+}
+
+.advantages__image {
+  &--sedona,
+  &--bridge {
+    @media (min-width: $desktop-width) {
+      margin-top: -65px;
+    }
   }
 }

@@ -2,6 +2,10 @@
   text-align: right;
   padding-left: 80px;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 77px;
+  }
+
   @include title($size-title, $height-title, $weight-bold, $color-black);
   text-transform: none;
 
