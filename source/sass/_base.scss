@@ -34,6 +34,11 @@ body {
   //background-color: $color-light-grey-3;
 }
 
+button,
+textarea {
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
 .page-wrapper {
   width: 320px;
   margin: 0 auto;

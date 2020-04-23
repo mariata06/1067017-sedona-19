@@ -3,17 +3,40 @@
   width: 320px;
   padding: 45px 55px 35px 55px;
   box-shadow: 0 5px 15px 0 rgba(00, 11, 11, 0.2);
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+    height: 347px;
+    padding: 60px 62px 49px 62px;
+  }
+
+  &--show {
+    display: block;
+  }
 }
 
 .popup-error__title {
   @include title($size-title, $height-title, $weight-bold, $color-black);
   margin-bottom: 25px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .popup-error__description {
   line-height: 24px;
   color: $color-black;
   margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 35px;
+  }
 }
 
 .popup-error__button {
@@ -25,6 +48,10 @@
   border: none;
   padding: 21px 75px;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+  }
 
   &:hover,
   &:focus {

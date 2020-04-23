@@ -11,13 +11,6 @@
   @media (min-width: $desktop-width) {
     width: 1200px;
   }
-
-  &--sedona,
-  &--bridge {
-    @media (min-width: $desktop-width) {
-      overflow: hidden;
-    }
-  }
 }
 
 .advantages__info {
@@ -33,7 +26,7 @@
   @media (min-width: $tablet-width) {
     background-image: none;
     max-width: 256px;
-    height: 256px;
+    min-height: 256px;
   }
 
   @media (min-width: $desktop-width) {
@@ -58,6 +51,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    background-color: $color-sky;
     height: 256px;
   }
 
@@ -68,27 +62,16 @@
   }
 
   @media (min-width: $desktop-width) {
+    background-color: $color-sky;
     max-width: 100%;
-    height: 256px;
+    overflow: hidden;
   }
 }
 
-/*
-.advantages__image {
-  height: 256px;
-
-  &--bridge {
-    @media (min-width: $tablet-width) {
-      order: -1;
-    }
-  }
-}
-*/
 .advantages__item {
   &--sedona {
-    //background-color: $color-sky;
+    background-color: $color-sky;
     min-height: 469px;
-    //min-width: 320px;
 
     @media (min-width: $tablet-width) {
       display: flex;
@@ -102,9 +85,8 @@
   }
 
   &--bridge {
-    //background-color: $color-sky;
+    background-color: $color-sky;
     min-height: 451px;
-    //min-width: 320px;
 
     @media (min-width: $tablet-width) {
       display: flex;
@@ -126,7 +108,6 @@
     min-height: 110px;
     padding: 35px 20px 0 70px;
     text-align: left;
-    //min-width: 320px;
 
     @media (min-width: $tablet-width) {
       background-size: 35%;
@@ -186,8 +167,9 @@
   &--burger {
     background-image: url("../img/icon-burger.svg");
     background-position: 20px 22px;
-    padding: 155px 37px 0 37px;
-    padding-bottom: 36px;
+    //padding: 155px 37px 0 37px;
+    padding: 27px 20px 36px 70px;
+    //padding-bottom: 36px;
 
     @media (min-width: $tablet-width) {
       background-position: 90px 61px;

@@ -54,3 +54,9 @@
   background-color: $color-medium-grey-4;
   box-shadow: 0 0 0 18px  $color-light-grey-4;
 }
+
+.impression-list__input:focus + label::before {
+  outline: thin dotted;
+  //outline: 5px auto -webkit-focus-ring-color;
+}
+
