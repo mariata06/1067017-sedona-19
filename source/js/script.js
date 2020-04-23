@@ -1,6 +1,5 @@
 var button = document.querySelector(".form-review__button");
 
-//var popup = document.querySelector(".modal-dialog");
 var popupsuccess = document.querySelector("popup-success")
 var close = popup.querySelector(".popup-success__button");
 
@@ -76,5 +75,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-
