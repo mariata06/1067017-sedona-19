@@ -8,14 +8,14 @@ mobileMenu.classList.add("site-nav--hide");
 
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
- mobileMenu.classList.toggle("site-nav--hide");
- mobileMenu.classList.add("site-nav--show");
- button.classList.add(".burger-menu--hide");
+  mobileMenu.classList.toggle("site-nav--hide");
+  mobileMenu.classList.add("site-nav--show");
+  button.classList.add(".burger-menu--hide");
 });
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
- mobileMenu.classList.remove("site-nav--show");
- mobileMenu.classList.add("site-nav--hide");
- button.classList.remove(".burger-menu--hide");
+  mobileMenu.classList.remove("site-nav--show");
+  mobileMenu.classList.add("site-nav--hide");
+  button.classList.remove(".burger-menu--hide");
 });
