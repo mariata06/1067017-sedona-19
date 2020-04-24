@@ -1,13 +1,15 @@
 .form-review {
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 70px;
+  padding-bottom: 38px;
   z-index: 5;
   position: relative;
+  background-color: $color-white;
 
   @media (min-width: $tablet-width) {
     padding: 60px 60px 62px 60px;
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -48,6 +50,8 @@
   }
 
   &--contacts {
+    letter-spacing: 0.1px;
+
     @media (min-width: $tablet-width) {
       position: relative;
       margin-bottom: 27px;
@@ -91,7 +95,8 @@
   }
 
   &--attraction {
-    margin-bottom: 17px;
+    letter-spacing: 0.05px;
+    margin-bottom: 16px;
 
     @media (min-width: $tablet-width) {
       position: relative;
@@ -136,6 +141,7 @@
   }
 
   &--user-review {
+    letter-spacing: 0.1px;
     margin-bottom: 15px;
 
     @media (min-width: $tablet-width) {
@@ -179,6 +185,9 @@
   }
 
   &--impression {
+    letter-spacing: 0.05px;
+    margin-bottom: 22px;
+
     @media (min-width: $tablet-width) {
       letter-spacing: 0.05px;
       margin-bottom: 57px;
@@ -255,6 +264,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-weight: 400;
     letter-spacing: 0.7px;
   }
@@ -268,12 +279,13 @@
 }
 
 .form-review__personal-data {
-  margin-top: 18px;
+  padding-top: 18px;
   margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
     min-width: 322px;
     margin-top: 0;
+    padding-top: 0;
     padding-left: 59px;
   }
 
@@ -303,7 +315,7 @@
 }
 
 .form-review__attraction {
-  margin-top: 45px;
+  margin-top: 48px;
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -347,7 +359,7 @@
 }
 
 .form-review__impression {
-  margin-top: 49px;
+  margin-top: 47px;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -456,7 +468,7 @@
 
 .user-phonenumber {
   position: relative;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 27px;
@@ -488,7 +500,7 @@
 }
 
 .form-review__input {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 700;
   height: 58px;
@@ -532,7 +544,7 @@
 
   &--usersurname,
   &--usermiddlename {
-    letter-spacing: 0.2px;
+    //letter-spacing: 0.2px;
     width: 192px;
 
     @media (min-width: $tablet-width) {
@@ -549,7 +561,7 @@
 
   &--phone {
     width: 100%;
-    margin-top: 5px;
+    margin-top: 7px;
     letter-spacing: 0.2px;
 
     @media (min-width: $tablet-width) {
@@ -588,6 +600,7 @@
   line-height: 24px;
   color: $color-black;
   padding-left: 20px;
+  letter-spacing: 0.3px;
 
   @media (min-width: $tablet-width) {
     letter-spacing: 0.3px;
@@ -697,7 +710,7 @@
   height: 18px;
 
   @media (min-width: $desktop-width) {
-    top: 20px;
+    top: 24px;
     bottom: 0;
     right: 20px;
   }
@@ -718,7 +731,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 30px;
+    top: 27px;
     bottom: 0;
     right: 20px;
   }

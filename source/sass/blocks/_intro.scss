@@ -6,6 +6,7 @@
   //top center;
   //margin: 0 auto;
   //width: 100%;
+  background-color: $color-white;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
@@ -144,8 +145,16 @@
 .intro__description {
   line-height: 26px;
   letter-spacing: 0.15px;
+  margin-bottom: 0;
+  padding-bottom: 14px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 48px;
+    margin-bottom: 0;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding-bottom: 49px;
   }
 }

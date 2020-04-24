@@ -39,11 +39,12 @@
   font-weight: $weight-bold;
   line-height: 26px;
   color: $color-black;
-  margin-top: 35px;
+  padding-top: 35px;
+  margin-top: 0;
   margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 0;
+    padding-top: 0;
     margin-bottom: 2px;
   }
 }

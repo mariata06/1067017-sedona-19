@@ -1,3 +1,27 @@
+/*****************************МОБИЛЬНОЕ МЕНЮ**********************************/
+/*
+var buttonBurger = document.querySelector(".burger-menu");
+
+var mobileMenu = document.querySelector(".site-nav");
+
+var closeNav = document.querySelector(".site-nav__close");
+
+mobileMenu.classList.add("site-nav--hide");
+
+buttonBurger.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mobileMenu.classList.toggle("site-nav--hide");
+  mobileMenu.classList.add("site-nav--show");
+  buttonBurger.classList.add("burger-menu--hide");
+});
+
+closeNav.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mobileMenu.classList.remove("site-nav--show");
+  mobileMenu.classList.add("site-nav--hide");
+  buttonBurger.classList.remove("burger-menu--hide");
+});
+*/
 /*****************************ОТПРАВКА ФОРМЫ, МОДАЛЬНЫЕ ОКНА******************************/
 var button = document.querySelector(".form-review__button");
 
@@ -87,31 +111,10 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+/*
 form.addEventListener("submit", function (evt) {
   if (isStorageSupport) {
     localStorage.setItem("userName", userName.value);
   }
 });
-
-/*****************************МОБИЛЬНОЕ МЕНЮ**********************************/
-var buttonBurger = document.querySelector(".burger-menu");
-
-var mobileMenu = document.querySelector(".site-nav");
-
-var closeNav = document.querySelector(".site-nav__close");
-
-mobileMenu.classList.add("site-nav--hide");
-
-buttonBurger.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mobileMenu.classList.toggle("site-nav--hide");
-  mobileMenu.classList.add("site-nav--show");
-  buttonBurger.classList.add("burger-menu--hide");
-});
-
-closeNav.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mobileMenu.classList.remove("site-nav--show");
-  mobileMenu.classList.add("site-nav--hide");
-  buttonBurger.classList.remove("burger-menu--hide");
-});
+*/

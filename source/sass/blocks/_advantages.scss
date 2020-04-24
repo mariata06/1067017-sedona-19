@@ -366,9 +366,18 @@
   }
 
   &--crowdy {
+    border-bottom: none;
+
     @media (min-width: $tablet-width) {
       padding-left: 34px;
       padding-right: 34px;
+    }
+  }
+
+  &--road {
+    @media (min-width: $desktop-width) {
+      padding-left: 45px;
+      padding-right: 45px;
     }
   }
 }
@@ -382,10 +391,15 @@
 }
 
 .advantages__image {
-  &--sedona,
+  &--sedona {
+    @media (min-width: $desktop-width) {
+      margin-top: -72px;
+    }
+  }
+
   &--bridge {
     @media (min-width: $desktop-width) {
-      margin-top: -65px;
+      margin-top: -77px;
     }
   }
 }

@@ -1,6 +1,7 @@
 .video {
   position: relative;
   padding-bottom: 40px;
+  background-color: $color-white;
 
   @media (min-width: $tablet-width) {
     padding: 36px 60px 43px 60px;
@@ -10,15 +11,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 70px 0 85px 0;
+    max-width: 1200px;
+    //margin: 0 auto;
+    padding: 39px 200px 85px 200px;
   }
 }
 
 .video__title {
   color: $color-black;
-  margin-top: 32px;
+  padding-top: 32px;
+  margin-top: 0;
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 26px;

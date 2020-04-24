@@ -7,12 +7,13 @@
   font-weight: $weight-bold;
   line-height: 26px;
   color: $color-black;
-  margin-top: 27px;
+  padding-top: 27px;
+  margin-top: 0;
   margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
-    margin-top: 55px;
+    padding-top: 55px;
     margin-bottom: 30px;
   }
 }
