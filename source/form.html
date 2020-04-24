@@ -6,7 +6,6 @@
   <title>HTML Academy: Седона</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -72,32 +71,34 @@
               <p class="form-review__paragraph form-review__paragraph--personal-data">Представьтесь:</p>
               <div tabindex="0" class="form-review__input-container user-name">
                 <label>Имя*:</label>
-                <input class="form-review__input form-review__input--username" type="text" name="user-name" value="Петр">
+                <input class="form-review__input form-review__input--username" type="text" name="user-name" value=""
+                  placeholder="Петр">
               </div>
               <div tabindex="0" class="form-review__input-container user-surname">
                 <label>Фамилия*:</label>
                 <input class="form-review__input form-review__input--usersurname" type="text" name="user-surname"
-                  value="Иванов" required>
+                  value="" placeholder="Иванов">
               </div>
               <div tabindex="0" class="form-review__input-container user-middlename">
                 <label>Отчество:</label>
                 <input class="form-review__input form-review__input--usermiddlename" type="text" name="user-middlename"
-                  value="Александрович">
+                  value="" placeholder="Александрович">
               </div>
             </div>
 
             <div class="form-review__contacts">
               <p class="form-review__paragraph form-review__paragraph--contacts">Контактная информация:</p>
               <div tabindex="0" class="form-review__input-container user-phonenumber">
-                <label class="form-review__label"><span class="form-review__span-phone">Контактный&nbsp;</span>Телефон*:</label>
-                <input type="tel" class="form-review__input form-review__input--phone" name="user-phonenumber"
-                  value="Введите телефон" required>
+                <label class="form-review__label"><span
+                    class="form-review__span-phone">Контактный&nbsp;</span>Телефон*:</label>
+                <input type="tel" class="form-review__input form-review__input--phone" name="user-phonenumber" value=""
+                  placeholder="Введите телефон">
               </div>
 
               <div tabindex="0" class="form-review__input-container user-email">
                 <label class="form-review__label">Электронная почта*:</label>
-                <input type="email" class="form-review__input form-review__input--email" name="user-email"
-                  value="Введите e-mail" required>
+                <input type="email" class="form-review__input form-review__input--email" name="user-email" value=""
+                  placeholder="Введите e-mail">
               </div>
             </div>
 
@@ -157,8 +158,8 @@
 
             <div class="form-review__user-review">
               <p class="form-review__paragraph form-review__paragraph--user-review">Опишите свои эмоции:</p>
-              <textarea tabindex="0" class="form-review__textarea" name="user-message" placeholder="Опишите подробно все свои восторги"
-                name="usermessage"></textarea>
+              <textarea tabindex="0" class="form-review__textarea" name="user-message"
+                placeholder="Опишите подробно все свои восторги" name="usermessage"></textarea>
             </div>
             <button type="submit" class="form-review__button">Отправить отзыв</button>
             <p class="form-review__required">* — обязательные поля</p>
@@ -203,6 +204,7 @@
     </footer>
 
   </div>
+  
   <section class="popup popup-error">
     <h2 class="visually-hidden">Модальное окно, отвечающее за появление ошибки на сайте</h2>
     <div class="popup-error__content">
@@ -224,7 +226,7 @@
   </section>
 
   <script src="js/script.js"></script>
-  <script src="js/script.mobile-menu.js"></script>
+
 </body>
 
 </html>

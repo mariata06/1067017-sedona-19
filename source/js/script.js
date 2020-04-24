@@ -1,18 +1,19 @@
+/*****************************ОТПРАВКА ФОРМЫ, МОДАЛЬНЫЕ ОКНА******************************/
 var button = document.querySelector(".form-review__button");
 
-var popupsuccess = document.querySelector("popup-success")
-var close = popup.querySelector(".popup-success__button");
+var popupSuccess = document.querySelector(".popup-success")
+var closeSuccess = popupSuccess.querySelector(".popup-success__button");
 
-var popuperror = document.querySelector("popup-error")
-var ok = popup.querySelector(".popup-error__button");
+var popupError = document.querySelector(".popup-error")
+var closeError = popupError.querySelector(".popup-error__button");
 
 var form = document.querySelector(".form-review__content");
 
-var userName = popup.querySelector("[name=user-name]");
+var userName = form.querySelector("[name=user-name]");
 
-var userEmail = popup.querySelector("[name=user-email]");
+var userEmail = form.querySelector("[name=user-email]");
 
-var userMessage = popup.querySelector("[name=user-message]");
+var userMessage = form.querySelector("[name=user-message]");
 
 var isStorageSupport = true;
 var currentName = "";
@@ -21,57 +22,96 @@ var currentEmail = "";
 try {
   currentName = localStorage.getItem("userName");
   currentEmail = localStorage.getItem("userEmail");
+
 } catch (err) {
   isStorageSupport = false;
 }
 
+//popupsuccess.classList.add("popup-success--hide");
+//popuperror.classList.add("popup-error--hide");
+
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
+  console.log("yrtrurrww");
+  //alert("начало");
+  if (!userName.value || !userEmail.value || !userMessage.value) {
 
-  //form.classList.add("form-show");
-
-  if (currentName) {
-    userName.value = currentName;
-    userEmail.focus();
-  } else {
-    userName.focus();
-  }
-
-  if (currentEmail) {
-    userEmail.value = currentEmail;
-    userMessage.focus();
-  } else {
-    userEmail.focus();
-  }
-
-  popupsuccess.classList.add("popup-success--show");
-});
-
-close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popupsuccess.classList.remove("popup-success--show");
-});
-
-form.addEventListener("submit", function (evt) {
-  if (!userName.value || !userEmail.value) {
     evt.preventDefault();
-    popuperror.classList.remove("popup-error--show");
-    popuperror.offsetWidth = popuperror.offsetWidth;
-    popuperror.classList.add("popup-error--show");
+    popupError.classList.remove("popup-error--show");
+    popupError.offsetWidth = popupError.offsetWidth;
+    popupError.classList.add("popup-error--show");
+    //alert("пусто");
   } else if (isStorageSupport) {
+    //alert("заполнили таки");
     localStorage.setItem("user-name", userName.value);
     localStorage.setItem("user-email", userEmail.value);
+    popupSuccess.classList.add("popup-success--show");
   }
+  //form.classList.add("form-show");
+
+  //popupsuccess.classList.add("popup-success--show");
+});
+
+function cursorFocus() {
+  if (!userName.value) {
+    userName.focus();
+  } else if (!userEmail.value) {
+    userEmail.focus();
+  } else if (!userMessage.value) {
+    userMessage.focus();
+  }
+}
+
+closeSuccess.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popupSuccess.classList.remove("popup-success--show");
+});
+
+closeError.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popupError.classList.remove("popup-error--show");
+  popupError.classList.add("popup-error");
+  cursorFocus();
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popuperror.classList.contains("popup-error-show")) {
-      popuperror.classList.remove("popup-error-show");
-    }
-    if (popupsuccess.classList.contains("popup-success--show")) {
-      popupsuccess.classList.remove("popup-success--show");
+    if (popupError.classList.contains("popup-error--show")) {
+      popupError.classList.remove("popup-error--show");
+      cursorFocus();
+    } else
+    if (popupSuccess.classList.contains("popup-success--show")) {
+      popupSuccess.classList.remove("popup-success--show");
     }
   }
+});
+
+form.addEventListener("submit", function (evt) {
+  if (isStorageSupport) {
+    localStorage.setItem("userName", userName.value);
+  }
+});
+
+/*****************************МОБИЛЬНОЕ МЕНЮ**********************************/
+var buttonBurger = document.querySelector(".burger-menu");
+
+var mobileMenu = document.querySelector(".site-nav");
+
+var closeNav = document.querySelector(".site-nav__close");
+
+mobileMenu.classList.add("site-nav--hide");
+
+buttonBurger.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mobileMenu.classList.toggle("site-nav--hide");
+  mobileMenu.classList.add("site-nav--show");
+  buttonBurger.classList.add("burger-menu--hide");
+});
+
+closeNav.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mobileMenu.classList.remove("site-nav--show");
+  mobileMenu.classList.add("site-nav--hide");
+  buttonBurger.classList.remove("burger-menu--hide");
 });

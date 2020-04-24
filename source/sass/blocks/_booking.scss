@@ -26,13 +26,13 @@
   @media (min-width: $tablet-width) {
     //padding-left: 165px;
     //padding-right: 165px;
-    padding-left: 185px;
-    padding-right: 185px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 400px;
-    padding-right: 400px;
+    padding-left: 350px;
+    padding-right: 350px;
     //margin-bottom: 28px;
   }
 }
@@ -96,4 +96,10 @@
   border: none;
   height: 100%;
   width: 100%;
+}
+
+.booking__span {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

@@ -70,11 +70,19 @@
     padding-top: 8px;
     letter-spacing: 0.5px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 11px;
+  }
 }
 
 .page-footer__copyright-logo {
   @media (min-width: $tablet-width) {
     padding-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 6px;
   }
 
   &:hover,

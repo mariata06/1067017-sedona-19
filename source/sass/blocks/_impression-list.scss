@@ -6,6 +6,10 @@
     padding-left: 77px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-left: 79px;
+  }
+
   @include title($size-title, $height-title, $weight-bold, $color-black);
   text-transform: none;
 
