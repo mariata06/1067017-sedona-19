@@ -1,5 +1,4 @@
 //COLOR VARIABLES
-
 $color-sky: #81b3d2;
 $color-sky-light: #9ac2db;
 $color-sky-light-2: #669ec0;
@@ -8,6 +7,7 @@ $color-sky-medium: #678fa8;
 $color-white: #ffffff;
 $color-extralight-grey: #eeeeee;
 $color-light-grey: #d6d6d6;
+$color-light-grey-2: #dbdbdb;
 $color-black: #000000;
 $color-greyblack: #333333;
 $color-medium-grey: #666666;
@@ -31,3 +31,7 @@ $weight-medium: 500;
 //PAGE-SIZE VARIABLES
 $tablet-width: 768px;
 $desktop-width: 1200px;
+
+//RETINA VARIABLES
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

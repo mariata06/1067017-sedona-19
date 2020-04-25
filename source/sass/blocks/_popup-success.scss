@@ -1,19 +1,74 @@
 .popup-success {
   margin: 0 auto;
   width: 320px;
-  padding: 45px 35px 35px 35px;
+  padding: 24px 22px 22px 22px;
   box-shadow: 0 5px 15px 0 rgba(00, 11, 11, 0.2);
+  background-image: linear-gradient(to top, #f2f2f2 0, #f2f2f2 100px, #ffffff 100px, #ffffff);
+  letter-spacing: 0.2px;
+  position: fixed;
+  z-index: 1000;
+  bottom: 150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  //display: block;
+  display: none;
+
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to top, #f2f2f2 0, #f2f2f2 140px, #ffffff 140px, #ffffff);
+    //margin: 0 auto;
+    padding: 24px 90px 42px 90px;
+    width: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 640px;
+    //height: 348px;
+    padding: 55px 91px 44px 91px;
+  }
 }
 
 .popup-success__title {
   @include title($size-title, $height-title, $weight-bold, $color-black);
-  margin-bottom: 25px;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 40px;
+    font-size: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+    margin-bottom: 26px;
+  }
 }
 
 .popup-success__description {
   line-height: 24px;
   color: $color-black;
-  margin-bottom: 30px;
+  margin-bottom: 54px;
+  padding-left: 25px;
+  padding-right: 25px;
+  letter-spacing: 0.05px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 78px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .popup-success__button {
@@ -23,8 +78,19 @@
   color: $color-white;
   background-color: $color-sky;
   border: none;
-  padding: 21px 75px;
+  padding: 17px 55px;
   text-transform: uppercase;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    padding: 16px 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    width: 100%;
+  }
 
   &:hover,
   &:focus {

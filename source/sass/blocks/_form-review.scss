@@ -1,32 +1,42 @@
 .form-review {
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 60px;
+  padding-bottom: 38px;
+  z-index: 5;
+  position: relative;
+  background-color: $color-white;
 
   @media (min-width: $tablet-width) {
-    padding: 65px 60px 100px 60px;
+    padding: 60px 60px 62px 60px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 50px 120px 0 120px;
+    padding: 46px 120px 0 120px;
     width: 1200px;
+    padding-bottom: 67px;
   }
 }
 
 .form-review__paragraph {
   @include title($size-title, $height-title, $weight-bold, $color-black);
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  letter-spacing: 0.675px;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
     text-align: left;
-    margin-bottom: 45px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 0.3px;
   }
 
   &--contacts,
-  &--attraction,
-  &--user-review {
+  &--attraction {
     @media (min-width: $tablet-width) {
       text-align: center;
       margin-bottom: 20px;
@@ -39,21 +49,167 @@
     }
   }
 
-  &--attraction {
+  &--contacts {
+    letter-spacing: 0.1px;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      margin-bottom: 27px;
+      letter-spacing: 0.1px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 124px;
+        height: 1px;
+        background-color: $color-light-grey-2;
+        position: absolute;
+        top: 10px;
+        left: 0;
+
+        @media (min-width: $desktop-width) {
+          width: 280px;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 124px;
+        height: 1px;
+        background-color: $color-light-grey-2;
+        position: absolute;
+        top: 10px;
+        right: 0;
+
+        @media (min-width: $desktop-width) {
+          width: 280px;
+        }
+      }
+    }
+
     @media (min-width: $desktop-width) {
+      margin-bottom: 68px;
+      margin-top: 5px;
+    }
+  }
+
+  &--attraction {
+    letter-spacing: 0.05px;
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      margin-bottom: 25px;
+      letter-spacing: 0.005px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 124px;
+        height: 1px;
+        background-color: $color-light-grey-2;
+        position: absolute;
+        top: 22px;
+        left: 0;
+
+        @media (min-width: $desktop-width) {
+          width: 280px;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 124px;
+        height: 1px;
+        background-color: $color-light-grey-2;
+        position: absolute;
+        top: 22px;
+        right: 0;
+
+        @media (min-width: $desktop-width) {
+          width: 280px;
+        }
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 300px;
+      padding-right: 300px;
+    }
+  }
+
+  &--user-review {
+    letter-spacing: 0.1px;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
       text-align: center;
-      margin-bottom: 20px;
-      padding-left: 280px;
-      padding-right: 280px;
+      padding-left: 150px;
+      padding-right: 150px;
+      position: relative;
+      margin-bottom: 56px;
+      letter-spacing: 0.055px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 124px;
+        height: 1px;
+        background-color: $color-light-grey-2;
+        position: absolute;
+        top: 10px;
+        left: 0;
+
+        @media (min-width: $desktop-width) {
+          width: 280px;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 124px;
+        height: 1px;
+        background-color: $color-light-grey-2;
+        position: absolute;
+        top: 10px;
+        right: 0;
+
+        @media (min-width: $desktop-width) {
+          width: 280px;
+        }
+      }
     }
   }
 
   &--impression {
+    letter-spacing: 0.05px;
+    margin-bottom: 22px;
+
+    @media (min-width: $tablet-width) {
+      letter-spacing: 0.05px;
+      margin-bottom: 57px;
+    }
+
     @media (min-width: $desktop-width) {
-      text-align: center;
-      //margin-bottom: 20px;
-      //padding-left: 150px;
-      //padding-right: 150px;
+      text-align: left;
+      padding-left: 80px;
+      margin-bottom: 55px;
+      letter-spacing: 0.05px;
+    }
+  }
+
+  &--personal-data {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 57px;
+    }
+
+    @media (min-width: $desktop-width) {
+      //text-align: left;
+      //padding-left: 80px;
+      margin-bottom: 55px;
     }
   }
 }
@@ -65,17 +221,6 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-}
-
-.user-phonenumber,
-.user-email {
-  @media (min-width: $desktop-width) {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding-right: 50px;
-  }
 }
 
 .form-review__contacts .form-review__paragraph {
@@ -94,9 +239,10 @@
   display: block;
   border: none;
   outline: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   text-transform: uppercase;
+  letter-spacing: 0.05px;
 
   &:hover,
   &:focus {
@@ -110,6 +256,20 @@
 
   @media (min-width: $tablet-width) {
     width: 50%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    padding-right: 0;
   }
 }
 
@@ -117,30 +277,39 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
   }
 }
 
 .form-review__personal-data {
-  margin-top: 15px;
-  margin-bottom: 20px;
+  padding-top: 18px;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
-    min-width: 324px;
+    min-width: 322px;
     margin-top: 0;
-    padding-left: 55px;
+    padding-top: 0;
+    padding-left: 59px;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 480px;
+    width: 480px;
+    //margin-left: 192px;
+    padding-left: 80px;
   }
 }
 
 .form-review__contacts {
-  margin-top: 45px;
+  margin-top: 43px;
   margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    margin-top: 34px;
   }
 
   @media (min-width: $desktop-width) {
@@ -148,18 +317,20 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    margin-top: 29px;
   }
 }
 
 .form-review__attraction {
-  margin-top: 45px;
+  margin-top: 48px;
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    margin-top: 49px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    margin-top: 27px;
   }
 }
 
@@ -168,34 +339,59 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    padding: 15px 95px;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 15px 0;
   }
 }
 
 .form-review__user-review {
-  margin-top: 40px;
+  margin-top: 45px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 22px;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
     width: 100%;
   }
 }
 
 .form-review__impression {
-  margin-top: 45px;
+  margin-top: 47px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     order: -1;
-    min-width: 324px;
+    min-width: 322px;
     margin-top: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 324px;
+      background-color: $color-light-grey-2;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media (min-width: $desktop-width) {
+        display: none;
+      }
+    }
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 480px;
+    width: 480px;
   }
 }
 
@@ -212,6 +408,8 @@
     display: inline-block;
     max-width: 324px;
     margin-left: auto;
+    margin-top: 21px;
+    //margin-right: 21px;
   }
 }
 
@@ -229,24 +427,67 @@
     position: relative;
   }
 
+  &--impression {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 22px;
+    }
+  }
+
   &--attraction {
-    margin-bottom: 23px;
+    margin-bottom: 24px;
 
     @media (min-width: $tablet-width) {
-      width: 324px;
-      margin-bottom: 35px;
+      width: 202px;
+      margin-bottom: 33px;
     }
 
     @media (min-width: $desktop-width) {
-      width: 240px;
+      width: 205px;
       margin-bottom: 35px;
+    }
+
+    &:nth-of-type(4n+1) {
+      @media (min-width: $desktop-width) {
+        width: 259px;
+      }
+    }
+
+    &:nth-of-type(4n+2) {
+      @media (min-width: $desktop-width) {
+        width: 258px;
+        letter-spacing: 0.4px;
+      }
+    }
+
+    &:nth-of-type(4n+3) {
+      @media (min-width: $desktop-width) {
+        width: 238px;
+      }
+    }
+
+    &:nth-of-type(4n+4) {
+      @media (min-width: $desktop-width) {
+        width: 204px;
+      }
     }
   }
 }
 
 .user-phonenumber {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    //padding-right: 50px;
+  }
 }
 
 .user-email {
@@ -257,11 +498,16 @@
   @media (min-width: $desktop-width) {
     border-bottom: none;
     padding-right: 0;
+    width: 480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    //padding-right: 50px;
   }
 }
 
 .form-review__input {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 700;
   height: 58px;
@@ -269,6 +515,15 @@
   border: none;
   outline: none;
   padding-left: 20px;
+
+  &::placeholder {
+    color: $color-black;
+    font-weight: 700;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+  }
 
   &:hover,
   &:focus {
@@ -284,68 +539,67 @@
   &--username {
     width: 230px;
 
+    @media (min-width: $tablet-width) {
+      width: 212px;
+    }
+
     @media (min-width: $desktop-width) {
-      width: 350px;
+      width: 352px;
+      margin-left: 13px;
     }
   }
-
-  /*
-  &--phone {
-    //position: relative;
-
-
-    &::after {
-      content: "";
-      background: url("../img/icon-phone.svg") no-repeat;
-      width: 58px;
-      height: 58px;
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      background-size: cover;
-      //display: block;
-      //width: 58px;
-      //height: 58px;
-      //background-color: $color-light-grey-5;
-      //top: 50%;
-      //left: 50%;
-    }
-
-    @media (min-width: $tablet-width) {
-      //margin-right: 80px;
-    }
-
-    @media (min-width: $desktop-width) {
-      //margin-right: 80px;
-    }
-    */
 
   &--usersurname,
   &--usermiddlename {
+    //letter-spacing: 0.2px;
     width: 192px;
 
+    @media (min-width: $tablet-width) {
+      letter-spacing: 0.001px;
+      width: 174px;
+      font-size: 16px;
+    }
+
     @media (min-width: $desktop-width) {
-      width: 310px;
+      letter-spacing: 0.2px;
+      width: 313px;
     }
   }
 
-  &--phone,
-  &--email {
+  &--phone {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 7px;
+    letter-spacing: 0.2px;
+
+    @media (min-width: $tablet-width) {
+      letter-spacing: 0.001px;
+      font-size: 16px;
+    }
 
     @media (min-width: $desktop-width) {
-      width: 315px;
+      width: 318px;
       padding-top: 0;
       padding-bottom: 0;
-      margin-left: 50px;
+      margin-left: 16px;
+      letter-spacing: 0.001px;
     }
   }
 
-  &::placeholder {
-    font-weight: 700;
+  &--email {
+    width: 100%;
+    margin-top: 5px;
+    letter-spacing: 0.2px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 318px;
+      padding-top: 0;
+      padding-bottom: 0;
+      //margin-left: 18px;
+    }
   }
 }
 
@@ -353,9 +607,15 @@
   line-height: 24px;
   color: $color-black;
   padding-left: 20px;
+  letter-spacing: 0.3px;
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.3px;
+  }
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
+    letter-spacing: 0.1px;
   }
 }
 
@@ -368,14 +628,33 @@
   padding-top: 20px;
   height: 160px;
   width: 100%;
-  margin-bottom: 51px;
+  margin-bottom: 48px;
 
   &::placeholder {
     @include title($size-title, $height-title, $weight-bold, $color-black);
+
+    @media (min-width: $desktop-width) {
+      width: 100%;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.005px;
+      //padding-top: 10px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    margin-bottom: 55px;
+    padding-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 52px;
   }
 }
 
@@ -386,20 +665,20 @@
   background-color: $color-light-grey-5;
   position: absolute;
   z-index: 1;
-  top: 40px;
+  top: 29px;
   bottom: 0;
   right: 0;
 
   @media (min-width: $tablet-width) {
-    top: 40px;
+    top: 29px;
     bottom: 0;
     right: 0;
   }
 
   @media (min-width: $desktop-width) {
-    top: 15px;
+    top: 5px;
     bottom: 0;
-    right: 50px;
+    right: 0;
   }
 }
 
@@ -410,18 +689,18 @@
   background-color: $color-light-grey-5;
   position: absolute;
   z-index: 1;
-  top: 40px;
+  top: 29px;
   bottom: 0;
   right: 0;
 
   @media (min-width: $tablet-width) {
-    top: 40px;
+    top: 29px;
     bottom: 0;
     right: 0;
   }
 
   @media (min-width: $desktop-width) {
-    top: 15px;
+    top: 5px;
     bottom: 0;
     right: 0;
   }
@@ -431,14 +710,16 @@
   content: url("../img/icon-phone.svg");
   position: absolute;
   z-index: 10;
-  top: 60px;
+  top: 47px;
   bottom: 0;
   right: 20px;
+  width: 18px;
+  height: 18px;
 
   @media (min-width: $desktop-width) {
-    top: 30px;
+    top: 24px;
     bottom: 0;
-    right: 70px;
+    right: 20px;
   }
 }
 
@@ -446,13 +727,25 @@
   content: url("../img/icon-mail.svg");
   position: absolute;
   z-index: 10;
-  top: 60px;
+  top: 55px;
   bottom: 0;
   right: 20px;
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    top: 50px;
+  }
 
   @media (min-width: $desktop-width) {
-    top: 30px;
+    top: 27px;
     bottom: 0;
     right: 20px;
+  }
+}
+
+.form-review__span-phone {
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }

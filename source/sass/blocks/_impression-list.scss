@@ -2,6 +2,14 @@
   text-align: right;
   padding-left: 80px;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 79px;
+  }
+
   @include title($size-title, $height-title, $weight-bold, $color-black);
   text-transform: none;
 
@@ -49,4 +57,9 @@
 .impression-list__input:checked:active + label::before {
   background-color: $color-medium-grey-4;
   box-shadow: 0 0 0 18px  $color-light-grey-4;
+}
+
+.impression-list__input:focus + label::before {
+  outline: thin dotted;
+  //outline: 5px auto -webkit-focus-ring-color;
 }

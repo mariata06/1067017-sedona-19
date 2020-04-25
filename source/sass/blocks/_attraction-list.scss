@@ -5,46 +5,12 @@
   @include title($size-title, $height-title, $weight-bold, $color-black);
   text-transform: none;
 
-  /*
-  &::before {
-    content: "";
-    display: block;
-    width: 56px;
-    height: 56px;
-    border-radius: 5px;
-    background-color: $color-light-grey-3;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-
-    /*
-    &:hover,
-    &:focus {
-      background-color: $color-light-grey-2;
-    }
-
-    &:active {
-      background-color: $color-medium-grey-4;
-    }
-
-
-    /*
-    @media (min-width: $tablet-width) {
-      top: 10px;
-      left: 70px;
-    }
-
-    @media (min-width: $desktop-width) {
-      left: 0;
-    }
-    */
-
   @media (min-width: $tablet-width) {
     //width: 324px;
     text-align: center;
     display: inline-block;
-    padding-left: 140px;
+    //padding-left: 140px;
+    //letter-spacing: 0.55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -53,55 +19,14 @@
     display: inline-block;
     padding-left: 80px;
   }
-}
-/*
-.attraction-list__input + label::before {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 56px;
-  border-radius: 5px;
-  background-color: $color-light-grey-3;
-  position: absolute;
-  top: 0;
-  left: 0;
 
-  @media (min-width: $tablet-width) {
-    top: 10px;
-    left: 70px;
-  }
-
-  @media (min-width: $desktop-width) {
-    left: 0;
+  &--bell-rock {
+    @media (min-width: $tablet-width) {
+      padding-left: 84px;
+    }
   }
 }
-*/
-/*
-.attraction-list__input:checked + label::before {
-  /*чекбокс выбранный
-  content: url("../img/icon-tick.svg");
-  //width: 23px;
-  //height: 16px;
-  //display: block;
-  //width: 22px;
-  //height: 22px;
-  //border-radius: 100px;
-  //background-color: $color-greyblack;
-  position: absolute;
-  top: 10px;
-  left: 50px;
-  //box-shadow: 0 0 0 18px $color-light-grey-3;
 
-  @media (min-width: $tablet-width) {
-    top: 10px;
-    left: 70px;
-  }
-
-  @media (min-width: $desktop-width) {
-    left: 0;
-  }
-}
-*/
 .attraction-list__input:checked:hover + label::before,
 .attraction-list__input:checked:focus + label::before {
   background-color: $color-light-grey-2;
@@ -127,13 +52,8 @@
   height: 56px;
   border-radius: 5px;
   background-color: $color-light-grey-3;
-  //vertical-align: baseline;
   display: inline-block;
-  //box-sizing: border-box;
-  //text-align: center;
   position: absolute;
-  //top: 0;
-  //left: 0;
   top: 0;
   left: 0;
 
@@ -143,34 +63,24 @@
   }
 
   @media (min-width: $desktop-width) {
-    //left: 0;
     top: 0;
     left: 0;
   }
 }
 
-.attraction-list__input:checked + label::before {
+.attraction-list__input:checked + label::after {
   content: url("../img/icon-tick.svg");
   position: absolute;
-  //top: 10px;
+  top: 17px;
+  left: 15px;
+
+  @media (min-width: $tablet-width) {
+    left: 19px;
+  }
 }
 
-/*
-content: "\00A0";
-    display: inline-block;
-    box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 2px solid #B0B0B0;
-    border-radius: 2px;
-    margin-right: 6px;
-    vertical-align: baseline;
-
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: bold;
-    color: #808080;
-*/
+.attraction-list__input:focus + label::before {
+  outline: thin dotted;
+  //outline: 5px auto -webkit-focus-ring-color;
+  opacity: 1;
+}

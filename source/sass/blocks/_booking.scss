@@ -7,13 +7,14 @@
   font-weight: $weight-bold;
   line-height: 26px;
   color: $color-black;
-  margin-top: 27px;
+  padding-top: 27px;
+  margin-top: 0;
   margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
-    margin-top: 55px;
-    margin-bottom: 25px;
+    padding-top: 55px;
+    margin-bottom: 30px;
   }
 }
 
@@ -24,8 +25,16 @@
   margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 165px;
-    padding-right: 165px;
+    //padding-left: 165px;
+    //padding-right: 165px;
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 350px;
+    padding-right: 350px;
+    //margin-bottom: 28px;
   }
 }
 
@@ -56,7 +65,12 @@
 
   @media (min-width: $tablet-width) {
     max-width: 458px;
-    margin: 50px auto 58px;
+    margin: 43px auto 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    //max-width: 458px;
+    margin: 49px auto 64px;
   }
 }
 
@@ -83,4 +97,10 @@
   border: none;
   height: 100%;
   width: 100%;
+}
+
+.booking__span {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
