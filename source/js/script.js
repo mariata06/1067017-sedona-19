@@ -1,3 +1,26 @@
+/*****************************МОБИЛЬНОЕ МЕНЮ**********************************/
+
+var buttonBurger = document.querySelector(".burger-menu");
+
+var mobileMenu = document.querySelector(".site-nav");
+
+var closeNav = document.querySelector(".site-nav__close");
+
+mobileMenu.classList.add("site-nav--hide");
+
+buttonBurger.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mobileMenu.classList.toggle("site-nav--hide");
+  mobileMenu.classList.add("site-nav--show");
+  buttonBurger.classList.add("burger-menu--hide");
+});
+
+closeNav.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mobileMenu.classList.remove("site-nav--show");
+  mobileMenu.classList.add("site-nav--hide");
+  buttonBurger.classList.remove("burger-menu--hide");
+});
 
 /*****************************ОТПРАВКА ФОРМЫ, МОДАЛЬНЫЕ ОКНА******************************/
 var button = document.querySelector(".form-review__button");
@@ -34,7 +57,7 @@ popupError.classList.add("popup-error--hide");
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
   console.log("yrtrurrww");
-  alert("начало");
+  //alert("клик начало");
   if (!userName.value || !userEmail.value || !userMessage.value) {
 
     evt.preventDefault();
@@ -43,7 +66,7 @@ button.addEventListener("click", function (evt) {
     popupError.classList.add("popup-error--show");
     alert("пусто");
   } else if (isStorageSupport) {
-    alert("заполнили таки");
+    //alert("заполнили таки");
     localStorage.setItem("user-name", userName.value);
     localStorage.setItem("user-email", userEmail.value);
     popupSuccess.classList.add("popup-success--show");
