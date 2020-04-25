@@ -12,6 +12,14 @@
   //display: block;
   display: none;
 
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
+
   @media (min-width: $tablet-width) {
     width: 400px;
     //height: 347px;
@@ -22,14 +30,6 @@
     width: 400px;
     //height: 347px;
     padding: 60px 55px 49px 55px;
-  }
-
-  &--hide {
-    display: none;
-  }
-
-  &--show {
-    display: block;
   }
 }
 

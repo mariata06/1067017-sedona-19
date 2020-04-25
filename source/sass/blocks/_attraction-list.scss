@@ -19,6 +19,12 @@
     display: inline-block;
     padding-left: 80px;
   }
+
+  &--bell-rock {
+    @media (min-width: $tablet-width) {
+      padding-left: 84px;
+    }
+  }
 }
 
 .attraction-list__input:checked:hover + label::before,
@@ -67,6 +73,10 @@
   position: absolute;
   top: 17px;
   left: 15px;
+
+  @media (min-width: $tablet-width) {
+    left: 19px;
+  }
 }
 
 .attraction-list__input:focus + label::before {

@@ -2,7 +2,7 @@
   background-color: $color-white;
 
   @media (min-width: $tablet-width) {
-    padding-top: 50px;
+    padding-top: 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -56,7 +56,7 @@
 
   &:last-of-type {
     border-bottom: 1px solid $color-light-grey-2;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 
     @media (min-width: $tablet-width) {
       border-bottom: none;
@@ -199,6 +199,12 @@
 
     @media (min-width: $tablet-width) {
       letter-spacing: 0.3px;
+    }
+  }
+
+  &--local-flora {
+    @media (min-width: $tablet-width) {
+      letter-spacing: 0.1px;
     }
   }
 }
