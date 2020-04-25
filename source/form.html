@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/svg4everybody.min.js" async></script>
 </head>
 
 <body>
@@ -71,18 +72,18 @@
               <p class="form-review__paragraph form-review__paragraph--personal-data">Представьтесь:</p>
               <div tabindex="0" class="form-review__input-container user-name">
                 <label for="name">Имя*:</label>
-                <input id="name" class="form-review__input form-review__input--username" type="text" name="user-name" value=""
-                  placeholder="Петр">
+                <input id="name" class="form-review__input form-review__input--username" type="text" name="user-name"
+                  value="" placeholder="Петр">
               </div>
               <div tabindex="0" class="form-review__input-container user-surname">
                 <label for="surname">Фамилия*:</label>
-                <input id="surname" class="form-review__input form-review__input--usersurname" type="text" name="user-surname"
-                  value="" placeholder="Иванов">
+                <input id="surname" class="form-review__input form-review__input--usersurname" type="text"
+                  name="user-surname" value="" placeholder="Иванов">
               </div>
               <div tabindex="0" class="form-review__input-container user-middlename">
                 <label for="middlename">Отчество:</label>
-                <input id="middlename"class="form-review__input form-review__input--usermiddlename" type="text" name="user-middlename"
-                  value="" placeholder="Александрович">
+                <input id="middlename" class="form-review__input form-review__input--usermiddlename" type="text"
+                  name="user-middlename" value="" placeholder="Александрович">
               </div>
             </div>
 
@@ -91,14 +92,14 @@
               <div tabindex="0" class="form-review__input-container user-phonenumber">
                 <label for="phone" class="form-review__label"><span
                     class="form-review__span-phone">Контактный&nbsp;</span>Телефон*:</label>
-                <input id="phone" type="tel" class="form-review__input form-review__input--phone" name="user-phonenumber" value=""
-                  placeholder="Введите телефон">
+                <input id="phone" type="tel" class="form-review__input form-review__input--phone"
+                  name="user-phonenumber" value="" placeholder="Введите телефон">
               </div>
 
               <div tabindex="0" class="form-review__input-container user-email">
                 <label for="email" class="form-review__label">Электронная почта*:</label>
-                <input id="email" type="email" class="form-review__input form-review__input--email" name="user-email" value=""
-                  placeholder="Введите e-mail">
+                <input id="email" type="email" class="form-review__input form-review__input--email" name="user-email"
+                  value="" placeholder="Введите e-mail">
               </div>
             </div>
 
@@ -140,7 +141,8 @@
                 <div tabindex="0" class="form-review__input-container form-review__input-container--attraction">
                   <input type="checkbox" id="bell-rock" name="attraction" class="visually-hidden attraction-list__input"
                     checked>
-                  <label for="bell-rock" class="attraction-list__label attraction-list__label--bell-rock">Гора-Колокол</label>
+                  <label for="bell-rock"
+                    class="attraction-list__label attraction-list__label--bell-rock">Гора-Колокол</label>
                 </div>
 
                 <div tabindex="0" class="form-review__input-container form-review__input-container--attraction">
@@ -159,7 +161,7 @@
             <div class="form-review__user-review">
               <p class="form-review__paragraph form-review__paragraph--user-review">Опишите свои эмоции:</p>
               <textarea tabindex="0" class="form-review__textarea" placeholder="Опишите подробно все свои восторги"
-                name="usermessage"></textarea>
+                name="user-message"></textarea>
             </div>
             <button type="submit" class="form-review__button">Отправить отзыв</button>
             <p class="form-review__required">* — обязательные поля</p>
@@ -193,12 +195,7 @@
       <p class="page-footer__copyright">
         <span>Разработано</span>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-logo">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" width="27px" height="34px" viewBox="0 0 26.943 34.09"
-            enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-            <path
-              d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" />
-          </svg>
+          <svg width="27" height="34"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
         </a>
       </p>
     </footer>
