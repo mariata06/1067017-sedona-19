@@ -665,18 +665,18 @@
   background-color: $color-light-grey-5;
   position: absolute;
   z-index: 1;
-  top: 29px;
+  top: 31px;
   bottom: 0;
   right: 0;
 
   @media (min-width: $tablet-width) {
-    top: 29px;
+    top: 31px;
     bottom: 0;
     right: 0;
   }
 
   @media (min-width: $desktop-width) {
-    top: 5px;
+    top: 7px;
     bottom: 0;
     right: 0;
   }

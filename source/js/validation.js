@@ -1,11 +1,10 @@
-
 /*****************************ОТПРАВКА ФОРМЫ, МОДАЛЬНЫЕ ОКНА******************************/
 var button = document.querySelector(".form-review__button");
 
-var popupSuccess = document.querySelector(".popup-success")
+var popupSuccess = document.querySelector(".popup-success");
 var closeSuccess = popupSuccess.querySelector(".popup-success__button");
 
-var popupError = document.querySelector(".popup-error")
+var popupError = document.querySelector(".popup-error");
 var closeError = popupError.querySelector(".popup-error__button");
 
 var form = document.querySelector(".form-review__content");
@@ -33,17 +32,17 @@ popupError.classList.add("popup-error--hide");
 
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
-  console.log("yrtrurrww");
-  alert("начало");
+  //console.log("начало");
+  //alert("начало");
   if (!userName.value || !userEmail.value || !userMessage.value) {
 
     evt.preventDefault();
     popupError.classList.remove("popup-error--show");
     popupError.offsetWidth = popupError.offsetWidth;
     popupError.classList.add("popup-error--show");
-    alert("пусто");
+    //alert("пусто");
   } else if (isStorageSupport) {
-    alert("заполнили таки");
+    //alert("заполнили таки");
     localStorage.setItem("user-name", userName.value);
     localStorage.setItem("user-email", userEmail.value);
     popupSuccess.classList.add("popup-success--show");
@@ -85,11 +84,5 @@ window.addEventListener("keydown", function (evt) {
     if (popupSuccess.classList.contains("popup-success--show")) {
       popupSuccess.classList.remove("popup-success--show");
     }
-  }
-});
-
-form.addEventListener("submit", function (evt) {
-  if (isStorageSupport) {
-    localStorage.setItem("userName", userName.value);
   }
 });
