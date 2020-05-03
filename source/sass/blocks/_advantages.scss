@@ -145,9 +145,9 @@
 
   &--gift {
     background-image: url("../img/icon-gift.svg");
-    background-position: 25px 15px;
+    background-position: 25px 16px;
     background-size: 10%;
-    padding: 30px 20px 0 70px;
+    padding: 28px 20px 0 70px;
 
     @media (min-width: $tablet-width) {
       background-position: 95px 55px;
@@ -235,7 +235,8 @@
 
   &--bridge {
     padding-top: 39px;
-    padding-bottom: 11px;
+    padding-bottom: 9px;
+    letter-spacing: 0.12px;
 
     @include title($size-title, $height-title, $weight-bold, $color-white);
 
@@ -243,13 +244,13 @@
       padding-top: 46px;
       padding-bottom: 10px;
       font-size: 21px;
-      padding-left: 33px;
-      padding-right: 33px;
+      padding-left: 32px;
+      padding-right: 32px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-left: 105px;
-      padding-right: 105px;
+      padding-left: 104px;
+      padding-right: 104px;
       padding-top: 55px;
     }
   }
@@ -268,7 +269,7 @@
   &--area,
   &--road,
   &--crowdy {
-    padding-top: 28px;
+    padding-top: 27px;
     padding-bottom: 9px;
 
     @media (min-width: $tablet-width) {
@@ -288,6 +289,7 @@
 .advantages__description {
   margin-top: 0;
   margin-bottom: 0;
+  letter-spacing: 0.1px;
 
   &--sedona {
     color: $color-white;
@@ -311,7 +313,7 @@
     color: $color-white;
     margin-top: 16px;
     margin-bottom: 15px;
-    //letter-spacing: 0.05px;
+    letter-spacing: 0.1px;
 
     @media (min-width: $tablet-width) {
       margin-top: 22px;
@@ -333,6 +335,8 @@
   }
 
   &--house {
+    letter-spacing: 0.1px;
+
     @media (min-width: $desktop-width) {
       //padding-left: 130px;
       //padding-right: 130px;
@@ -401,5 +405,11 @@
     @media (min-width: $desktop-width) {
       margin-top: -77px;
     }
+  }
+}
+
+.advantages__span {
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }

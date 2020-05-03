@@ -9,30 +9,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 60px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding: 30px 60px 33px 60px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1200px;
     padding: 0 120px;
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: 32px;
+    padding-bottom: 31px;
     justify-content: space-between;
   }
 }
-
-/*
-.page-footer__social-list {
-  list-style: none;
-  padding-left: 0;
-
-  @media (min-width: $tablet-width) {
-    margin-right: 3px;
-  }
-}
-*/
 
 .page-footer__hashtag {
   font-size: 21px;
@@ -53,41 +40,59 @@
   line-height: 26px;
   color: $color-black;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 28px;
   display: flex;
-  align-self: center;
   justify-content: center;
+  height: 57px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    width: 132px;
   }
 }
 
-.page-footer__copyright span {
-  padding-top: 5px;
-  padding-right: 10px;
+.page-footer__copyright p {
+  display: block;
+  margin-right: 7px;
+  padding-left: 5px;
+  letter-spacing: 0.35px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 8px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.35px;
+    padding-left: 8px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 11px;
+    //padding-top: 17px;
+    //padding-bottom: 0;
+    //padding-left: 10px;
+  }
+}
+
+.page-footer__copyright-logo {
+  //margin-top: 29px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
   }
 }
 
 .page-footer__copyright-logo svg {
   fill: $color-black;
-  width: 36px;
-  height: 54px;
+  width: 39px;
+  height: 57px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 4px;
+    //width: 41px;
+    //height: 57px;
+    //padding-top: 5px;
+    //padding-left: 5px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 6px;
+    //padding-top: 6px;
+    margin-bottom: 0;
   }
 }
 
@@ -99,28 +104,3 @@
 .page-footer__copyright-logo:active svg {
   opacity: 30%;
 }
-
-/*
-.page-footer__logo {
-  fill: $color-black;
-  width: 27px;
-  height: 34px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 4px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 6px;
-  }
-}
-
-.page-footer__logo:hover,
-.page-footer__logo:focus {
-  fill: $color-sky;
-}
-
-.page-footer__logo:active {
-  opacity: 30%;
-}
-*/

@@ -73,8 +73,16 @@
   font-weight: 700;
   //color: $color-white;
   //height: 55px;
-  padding: 7.5px 0 7.5px 0;
+  padding: 7px 0 7px 0;
   //background-color: $color-sky;
+
+  &:first-child {
+    padding: 7.5px 0 7.5px 0;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+    }
+  }
 
   &:hover,
   &:focus {

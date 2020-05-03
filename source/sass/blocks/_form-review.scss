@@ -15,14 +15,14 @@
   @media (min-width: $desktop-width) {
     padding: 46px 120px 0 120px;
     width: 1200px;
-    padding-bottom: 67px;
+    padding-bottom: 65px;
   }
 }
 
 .form-review__paragraph {
   @include title($size-title, $height-title, $weight-bold, $color-black);
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   letter-spacing: 0.675px;
 
   @media (min-width: $tablet-width) {
@@ -231,7 +231,7 @@
 
 .form-review__button {
   font-size: 21px;
-  font-weight: $weight-bold;
+  font-weight: 700;
   line-height: 26px;
   color: $color-white;
   background-color: $color-sky;
@@ -260,14 +260,12 @@
     padding-bottom: 15px;
     padding-right: 15px;
     font-size: 20px;
-    font-weight: 400;
     letter-spacing: 0.7px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 16px;
     padding-bottom: 16px;
-    font-weight: 400;
     letter-spacing: 0.7px;
     padding-right: 0;
   }
@@ -625,10 +623,11 @@
   outline: none;
   padding-left: 20px;
   padding-right: 10px;
-  padding-top: 20px;
+  padding-top: 18px;
   height: 160px;
   width: 100%;
-  margin-bottom: 48px;
+  margin-bottom: 45px;
+  resize: none;
 
   &::placeholder {
     @include title($size-title, $height-title, $weight-bold, $color-black);
@@ -644,8 +643,8 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
-    margin-bottom: 55px;
-    padding-top: 17px;
+    margin-bottom: 52px;
+    padding-top: 15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -710,7 +709,7 @@
   content: url("../img/icon-phone.svg");
   position: absolute;
   z-index: 10;
-  top: 47px;
+  top: 49px;
   bottom: 0;
   right: 20px;
   width: 18px;
@@ -727,7 +726,7 @@
   content: url("../img/icon-mail.svg");
   position: absolute;
   z-index: 10;
-  top: 55px;
+  top: 53px;
   bottom: 0;
   right: 20px;
   width: 16px;
