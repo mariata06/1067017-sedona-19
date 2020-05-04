@@ -6,7 +6,7 @@
   //top center;
   //margin: 0 auto;
   //width: 100%;
-  background-color: $color-white;
+  background-color: $color-sky;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
@@ -132,8 +132,10 @@
     font-size: 21px;
     padding-left: 100px;
     padding-right: 100px;
-    margin-top: 48px;
-    padding-top: 26px;
+    //margin-top: 48px;
+    //padding-top: 26px;
+    margin-top: 23px;
+    padding-top: 51px;
   }
 
   @media (min-width: $desktop-width) {

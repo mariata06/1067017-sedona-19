@@ -33,7 +33,7 @@
             <a href="photo.html" class="site-nav__list-link">фото и видео</a>
           </li>
           <li class="site-nav__list-item">
-            <a href="form.html" class="site-nav__list-link">Форма отзыва</a>
+            <a href="form.html" class="site-nav__list-link site-nav__list-link--active">Форма отзыва</a>
           </li>
           <li class="site-nav__list-item">
             <a href="https://htmlacademy.ru" class="site-nav__list-link">HTML academy</a>
@@ -167,7 +167,7 @@
               </div>
             </div>
 
-            <div class="form-review__user-review">
+            <div tabindex="0" class="form-review__user-review">
               <p class="form-review__paragraph form-review__paragraph--user-review">Опишите свои эмоции:</p>
               <textarea tabindex="0" class="form-review__textarea" placeholder="Опишите подробно все свои восторги"
                 name="user-message"></textarea>
@@ -209,7 +209,7 @@
       </ul>
       <div class="page-footer__copyright">
         <p>Разработано</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-logo">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-logo" aria-label="Htmlacademy">
           <svg width="27" height="34">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>

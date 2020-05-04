@@ -153,6 +153,22 @@
   }
 }
 
+.photography__name-author-wrapper {
+  &--front {
+    @media (min-width: $tablet-width) {
+      width: 500px;
+    }
+  }
+
+  &--local-flora,
+  &--road-north,
+  &--devils-bridge {
+    @media (min-width: $tablet-width) {
+      width: 200px;
+    }
+  }
+}
+
 .photography__caption {
   padding: 0 20px;
 

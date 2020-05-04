@@ -35,7 +35,7 @@
             <a href="index.html" class="site-nav__list-link">Главная</a>
           </li>
           <li class="site-nav__list-item">
-            <a href="photo.html" class="site-nav__list-link">фото и видео</a>
+            <a href="photo.html" class="site-nav__list-link site-nav__list-link--active">фото и видео</a>
           </li>
           <li class="site-nav__list-item">
             <a href="form.html" class="site-nav__list-link">Форма отзыва</a>
@@ -98,7 +98,7 @@
                 </picture>
               </a>
               <figcaption class="photography__caption">
-                <div class="photography__name-author-wrapper">
+                <div class="photography__name-author-wrapper photography__name-author-wrapper--front">
                   <h3 class="photography-item__photo-name">Неродные просторы</h3>
                   <p class="photography-item__author">Автор фото: Борис</p>
                 </div>
@@ -132,7 +132,7 @@
                 </picture>
               </a>
               <figcaption class="photography__caption">
-                <div class="photography__name-author-wrapper">
+                <div class="photography__name-author-wrapper photography__name-author-wrapper--local-flora">
                   <h3 class="photography-item__photo-name photography-item__photo-name--local-flora">Местная
                     растительность</h3>
                   <p class="photography-item__author">Автор фото: Сергей</p>
@@ -168,7 +168,7 @@
                 </picture>
               </a>
               <figcaption class="photography__caption">
-                <div class="photography__name-author-wrapper">
+                <div class="photography__name-author-wrapper photography__name-author-wrapper--road-north">
                   <h3 class="photography-item__photo-name photography-item__photo-name--road-north">Дорога на север</h3>
                   <p class="photography-item__author">Автор фото: Петр</p>
                 </div>
@@ -203,7 +203,7 @@
                 </picture>
               </a>
               <figcaption class="photography__caption">
-                <div class="photography__name-author-wrapper">
+                <div class="photography__name-author-wrapper photography__name-author-wrapper--devils-bridge">
                   <h3 class="photography-item__photo-name">Мост дьявола</h3>
                   <p class="photography-item__author">Автор фото: Антон</p>
                 </div>
@@ -249,19 +249,19 @@
 
           </div>
 
-          <button class="video-player__button video-player__button--replay">
+          <button class="video-player__button video-player__button--replay" aria-label="replay">
             <svg class="video-player__icon video-player__icon--replay" width="16" height="20">
               <use xlink:href="img/sprite.svg#icon-video-replay"></use>
             </svg>
           </button>
 
-          <button class="video-player__button video-player__button--subtitles">
+          <button class="video-player__button video-player__button--subtitles" aria-label="subtitles">
             <svg class="video-player__icon video-player__icon--subtitles" width="32" height="20">
               <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
             </svg>
           </button>
 
-          <button class="video-player__button video-player__button--fullscreen">
+          <button class="video-player__button video-player__button--fullscreen" aria-label="fullscreen">
             <svg class="video-player__icon video-player__icon--fullscreen" width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
             </svg>
@@ -299,7 +299,7 @@
       </ul>
       <div class="page-footer__copyright">
         <p>Разработано</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-logo">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-logo" aria-label="Htmlacademy">
           <svg width="27" height="34">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>

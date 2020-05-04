@@ -655,6 +655,26 @@
     letter-spacing: 0.5px;
     margin-bottom: 52px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $color-light-grey-2;
+  }
+
+  &:active {
+    border: 4px solid $color-light-grey-2;
+    background-color: $color-white;
+    padding-left: 16px;
+    padding-top: 14px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 11px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 11px;
+    }
+  }
 }
 
 .user-phonenumber::after {

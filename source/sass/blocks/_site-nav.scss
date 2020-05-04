@@ -31,6 +31,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: none;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -156,6 +157,24 @@
   @media (min-width: $tablet-width) {
     color: $color-black;
     padding: 0;
+  }
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      color: $color-medium-brown;
+    }
+
+    &:active {
+      @media (min-width: $tablet-width) {
+        color: $color-light-brown;
+      }
+    }
+
+    &:hover {
+      @media (min-width: $tablet-width) {
+        color: $color-dark-brown;
+      }
+    }
   }
 }
 
