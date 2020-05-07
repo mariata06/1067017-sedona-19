@@ -53,7 +53,7 @@
       background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-tablet@1x.jpg");
       background-position: center 235px, 0 -228px;
       background-repeat: no-repeat, no-repeat;
-      //height: 290px;
+      height: 291px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-tablet@2x.jpg");
@@ -64,7 +64,7 @@
       background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
       background-position: center 244px, 0 -218px;
       background-repeat: no-repeat, no-repeat;
-      //height: 313px;
+      height: 300px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
