@@ -9,8 +9,16 @@
   border: none;
   cursor: pointer;
 
+  &--nojs {
+    display: none;
+  }
+
   &--hide {
     display: none;
+  }
+
+  &--show {
+    display: block;
   }
 
   &:hover {

@@ -31,7 +31,19 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  display: none;
+  //display: block;
+
+  &--nojs {
+    display: none;
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
