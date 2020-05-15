@@ -325,6 +325,8 @@
 }
 
 .photography-item__picture {
+  background-color: $color-photo-bg;
+
   @media (min-width: $tablet-width) {
     height: 267px;
     display: block;
