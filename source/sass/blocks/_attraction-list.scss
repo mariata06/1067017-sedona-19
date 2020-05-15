@@ -32,10 +32,6 @@
   background-color: $color-light-grey-2;
 }
 
-.attraction-list__input:checked:active + label::before {
-  background-color: $color-medium-grey-4;
-}
-
 .attraction-list__input:hover + label::before,
 .attraction-list__input:focus + label::before {
   background-color: $color-light-grey-2;
@@ -43,7 +39,11 @@
 
 
 .attraction-list__input:active + label::before {
-  background-color: $color-medium-grey-4;
+  background-color: $color-light-grey-4;
+}
+
+.attraction-list__input:checked:active + label::before {
+  background-color: $color-light-grey-4;
 }
 
 .attraction-list__input + label::before {
