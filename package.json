@@ -51,6 +51,7 @@
     "node": "8.16"
   },
   "dependencies": {
-    "pump": "^3.0.0"
+    "pump": "^3.0.0",
+    "svgxuse": "^1.2.6"
   }
 }
