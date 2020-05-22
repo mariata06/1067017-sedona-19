@@ -63,3 +63,13 @@
   outline: thin dotted;
   //outline: 5px auto -webkit-focus-ring-color;
 }
+
+.impression-list__input:checked:disabled + label::before {
+  background-color: $color-medium-grey-3;
+  //opacity: 30%;
+}
+
+.impression-list__input:disabled + label::before {
+  background-color: $color-medium-grey-3;
+  //opacity: 30%;
+}
