@@ -68,6 +68,11 @@
   }
 }
 
+.attraction-list__input:disabled + label::before {
+  background-color: $color-medium-grey;
+  opacity: 30%;
+}
+
 .attraction-list__input:checked + label::after {
   content: url("../img/icon-tick.svg");
   position: absolute;
@@ -77,6 +82,10 @@
   @media (min-width: $tablet-width) {
     left: 19px;
   }
+}
+
+.attraction-list__input:checked:disabled + label::after {
+  opacity: 30%;
 }
 
 .attraction-list__input:focus + label::before {

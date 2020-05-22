@@ -46,6 +46,12 @@
   cursor: pointer;
   background-color: transparent;
 
+  &:disabled {
+    svg {
+      opacity: 30%;
+    }
+  }
+
   &--volume {
     position: absolute;
     top: 45%;

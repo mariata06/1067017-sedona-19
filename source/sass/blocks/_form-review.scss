@@ -218,9 +218,9 @@
   }
 }
 
-.user-name,
-.user-surname,
-.user-middlename {
+.form-review .user-name,
+.form-review .user-surname,
+.form-review .user-middlename {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -517,7 +517,7 @@
   }
 }
 
-.user-phonenumber {
+.form-review .user-phonenumber {
   position: relative;
   margin-bottom: 15px;
 
@@ -534,7 +534,7 @@
   }
 }
 
-.user-email {
+.form-review .user-email {
   //border-bottom: 1px solid #e5e5e5;
   position: relative;
   margin-bottom: 5px;
@@ -727,7 +727,7 @@
   }
 }
 
-.user-phonenumber::after {
+.form-review .user-phonenumber::after {
   content: "";
   width: 58px;
   height: 58px;
@@ -751,7 +751,7 @@
   }
 }
 
-.user-email::after {
+.form-review .user-email::after {
   content: "";
   width: 58px;
   height: 58px;
@@ -775,7 +775,7 @@
   }
 }
 
-.user-phonenumber::before {
+.form-review .user-phonenumber::before {
   content: url("../img/icon-phone.svg");
   position: absolute;
   z-index: 10;
@@ -792,7 +792,7 @@
   }
 }
 
-.user-email::before {
+.form-review .user-email::before {
   content: url("../img/icon-mail.svg");
   position: absolute;
   z-index: 10;
