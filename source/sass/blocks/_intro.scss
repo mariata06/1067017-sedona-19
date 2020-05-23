@@ -22,6 +22,7 @@
   @media (min-width: $tablet-width) {
     background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-tablet@1x.jpg");
     //background-position: center 462px, center 0;
+    background-position: center bottom -1px, center top;
     background-size: 155%, cover;
     background-repeat: no-repeat, no-repeat;
     //top center;
